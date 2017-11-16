@@ -1,0 +1,25 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+.nav-out-cont {
+    background-color: aliceblue;
+}
+.nav-inn-cont {
+    margin: 0 auto;
+    width: 70%;
+}
+nav {
+    height: 100px;
+    background-color: aquamarine;
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    display: inline-block;
+
+}
+nav a:hover {
+
+}
