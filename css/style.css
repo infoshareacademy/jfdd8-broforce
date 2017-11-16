@@ -3,23 +3,40 @@ body {
     margin: 0;
 }
 .nav-out-cont {
-    background-color: aliceblue;
+    border-bottom: 1px solid #d9ded8;
 }
 .nav-inn-cont {
     margin: 0 auto;
     width: 70%;
 }
 nav {
-    height: 100px;
-    background-color: aquamarine;
+    height: 70px;
+}
+nav ul {
+    list-style-type: none;
+    float: right;
+    margin-top: 17px;
+}
+nav li {
+    display: inline-block;
+    text-transform: uppercase;
 }
 nav a {
     text-decoration: none;
+    font-family: Arial;
+    font-size: 0.8em;
+    font-weight: bold;
     color: black;
-    margin-left: 20px;
+    padding: 7px 20px;
+    border-radius: 50px;
     display: inline-block;
 
 }
 nav a:hover {
-
+    color: white;
+    background-color: dodgerblue;
+}
+#top_logo {
+    margin: 15px 0;
+    width: 40px;
 }
