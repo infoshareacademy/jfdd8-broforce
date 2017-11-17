@@ -3,19 +3,27 @@ body {
     margin: 0;
 }
 .nav-out-cont {
+    background: white;
     border-bottom: 1px solid #d9ded8;
-}
-.nav-inn-cont {
-    margin: 0 auto;
-    width: 70%;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 nav {
+    margin: 0 auto;
     height: 70px;
+    width:80%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+.nav-flex {
+    align-self: flex-start;
+}
+
 nav ul {
     list-style-type: none;
-    float: right;
-    margin-top: 17px;
 }
 nav li {
     display: inline-block;
@@ -30,13 +38,14 @@ nav a {
     padding: 7px 20px;
     border-radius: 50px;
     display: inline-block;
-
 }
 nav a:hover {
     color: white;
     background-color: dodgerblue;
 }
 #top_logo {
-    margin: 15px 0;
-    width: 40px;
+    width: 5%;
+}
+.top-sec-margin {
+    margin-top: 100px;
 }
