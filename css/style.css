@@ -44,7 +44,8 @@ nav a:hover {
     background-color: dodgerblue;
 }
 #top_logo {
-    width: 5%;
+
+    height: 40px;
 }
 .top-sec-margin {
     margin-top: 100px;
