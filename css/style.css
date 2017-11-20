@@ -61,7 +61,7 @@ nav a:hover {
 
 .foot-out-cont {
     background-color: #F6E4B5;
-    }
+}
 
 .sign-out-cont {
     background-color: #F6E4B5;
@@ -80,14 +80,16 @@ section {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-content: space-between;
-    height: 300px;
+    align-content: stretch;
+    height: 100vh;
+    padding-bottom: 2%;
 }
 
 .feature {
-    background-color: #369;
+    background-color: #1FAD9F;
     color: white;
-    width: 40%;
+    max-width: 800px;
+    width: 100%;
     margin-top: 2%;
     text-align: center;
 }
