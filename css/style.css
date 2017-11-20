@@ -2,6 +2,9 @@ body {
     padding: 0;
     margin: 0;
 }
+.center {
+    margin: 0 auto;
+}
 .nav-out-cont {
     background: white;
     border-bottom: 1px solid #d9ded8;
@@ -50,11 +53,30 @@ nav a:hover {
 .top-sec-margin {
     margin-top: 100px;
 }
-
+/*team*/
+.team-inn-cont {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    background : #783293;
+}
 .team-out-cont {
     background-color: gold;
 }
+.team-member-cont {
+    width: 20%;
+    background: #336699;
+    margin-right: 6%;
+}
+.team-inn-cont div:last-child {
+    margin-right: 0;
+}
+.team-member-cont img {
+    width: 100%;
+}
 
+
+/*koniec timu*/
 .desc-out-cont {
     background-color: darkorange;
 }
@@ -74,3 +96,4 @@ nav a:hover {
 section {
     height: 100vh;
 }
+.
