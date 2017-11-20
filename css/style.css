@@ -44,8 +44,33 @@ nav a:hover {
     background-color: dodgerblue;
 }
 #top_logo {
-    width: 5%;
+
+    height: 40px;
 }
 .top-sec-margin {
     margin-top: 100px;
+}
+
+.team-out-cont {
+    background-color: gold;
+}
+
+.desc-out-cont {
+    background-color: darkorange;
+}
+
+.foot-out-cont {
+    background-color: orange;
+    }
+
+.sign-out-cont {
+    background-color: rosybrown;
+}
+
+.fun-out-cont {
+    background-color: yellow;
+}
+
+section {
+    height: 100vh;
 }
