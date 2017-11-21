@@ -1,9 +1,11 @@
 body {
     padding: 0;
     margin: 0;
+    font-family: Arial sans-serif;
 }
 .center {
     margin: 0 auto;
+    width: 80%;
 }
 .nav-out-cont {
     background: white;
@@ -34,7 +36,7 @@ nav li {
 }
 nav a {
     text-decoration: none;
-    font-family: Arial;
+    font-family: Arial sans-serif;
     font-size: 0.8em;
     font-weight: bold;
     color: black;
@@ -52,6 +54,30 @@ nav a:hover {
 }
 .top-sec-margin {
     margin-top: 100px;
+}
+/*zajawka*/
+.desc-out-cont {
+    background-image: url("../images/top-back.jpg");
+    background-repeat: no-repeat;
+}
+.desc-inn-cont {
+    display: flex;
+    justify-content: space-between;
+}
+.desc-inn-cont img {
+    position: relative;
+    top: 15%;
+    width: 100%;
+}
+.desc-inn-cont h1 {
+    font-family: Arial sans-serif;
+    font-size: 100px;
+    color: white;
+}
+.desc-inn-cont {
+    font-family: Arial sans-serif;
+    font-size: 100px;
+    color: white;
 }
 /*team*/
 .team-inn-cont {
@@ -77,9 +103,7 @@ nav a:hover {
 
 
 /*koniec timu*/
-.desc-out-cont {
-    background-image: url("images\sign-in-back.jpg");
-}
+
 
 .foot-out-cont {
     background-color: #F6E4B5;
