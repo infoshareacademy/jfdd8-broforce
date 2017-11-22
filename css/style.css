@@ -1,27 +1,29 @@
-body {
+body, h1, h2 {
     padding: 0;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 .center {
     margin: 0 auto;
+    width: 63%;
 }
-.nav-out-cont {
-    background: white;
-    border-bottom: 1px solid #d9ded8;
+.top-background {
+    background-image: url("../images/top-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav-cont {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 5;
+    padding-top: 15px;
 }
 nav {
     margin: 0 auto;
-    height: 70px;
-    width:80%;
-    background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.nav-flex {
     align-self: flex-start;
 }
 
@@ -34,24 +36,147 @@ nav li {
 }
 nav a {
     text-decoration: none;
-    font-family: Arial;
-    font-size: 0.8em;
-    font-weight: bold;
-    color: black;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    color: white;
     padding: 7px 20px;
     border-radius: 50px;
     display: inline-block;
 }
 nav a:hover {
-    color: white;
-    background-color: dodgerblue;
+    color: rgb(5,178,247);
+    background-color: white;
 }
 #top_logo {
-
     height: 40px;
 }
-.top-sec-margin {
-    margin-top: 100px;
+
+/*zajawka*/
+.desc-inn-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.desc-inn-cont img {
+    margin-top: 150px;
+}
+.desc-img-ctnr {
+    width: 45%;
+}
+.desc-desc {
+    width: 45%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.desc-desc h1 {
+    font-size: 80px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: white;
+    margin: 10px 0;
+}
+.desc-desc h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: rgb(255,254,58);
+}
+.desc-desc p {
+    font-size:16px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    line-height: 22px;
+    color: white;
+}
+.desc-desc button {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 17px 0;
+    margin-top: 30px;
+    width: 40%;
+    outline: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}
+.desc-desc button:hover {
+    background-color: white;
+}
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    .desc-desc {
+        width: 50%;
+    }
+    .desc-inn-cont img {
+        margin-top: 100px;
+        width: 80%;
+    }
+    .desc-desc h1 {
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: white;
+        margin: 15px 0 15px 0;
+    }
+    .desc-desc h2 {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 18px;
+        color: rgb(255,254,58);
+    }
+}
+@media screen and (max-width: 800px) {
+    .top-background {
+        background-image: url("../images/top-back.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 70px;
+    }
+    .nav-cont {
+    }
+    nav {
+    }
+    nav ul, li {
+         width: 100%;
+        display: inline;
+     }
+    .desc-inn-cont {
+        display: block;
+        padding-top: 200px;
+    }
+
+    .desc-desc {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .desc-img-ctnr {
+        width: 100%;
+    }
+    .desc-inn-cont img {
+        width: 100%;
+        margin-top: 85px;
+    }
+    .desc-desc h1 {
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: white;
+        margin: 15px 0 15px 0;
+    }
+    .desc-desc h2 {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 18px;
+        color: rgb(255,254,58);
+    }
 }
 /*team*/
 .team-inn-cont {
@@ -77,9 +202,7 @@ nav a:hover {
 
 
 /*koniec timu*/
-.desc-out-cont {
-    background-image: url("images\sign-in-back.jpg");
-}
+
 
 .foot-out-cont {
     background-color: #F6E4B5;
@@ -164,7 +287,7 @@ h3 {
 .flex {
     display: flex;
 }
-button {
+.sign-in-ctnr button {
     background: #6F6;
     border: 2px solid white;
     border-radius: 50px;
@@ -184,8 +307,7 @@ button:hover {
 .sign-in-ctnr {
     justify-content: center;
     background-color:#0CF;
-    background-image: url(images/sign-in-back1.jpg);
-    border-top: 0px solid #09F;
+    background-image: url(../images/sign-in-back1.jpg);
     overflow: hidden;
 }
 
