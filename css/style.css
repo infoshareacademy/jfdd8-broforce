@@ -202,8 +202,6 @@ nav a:hover {
 
 
 /*koniec timu*/
-
-
 .foot-out-cont {
     background-color: #F6E4B5;
 }
@@ -212,36 +210,81 @@ nav a:hover {
     background-color: #F6E4B5;
 }
 
-.fun-out-cont {
-    background-color: #CD3131;
+
+/*funkcje od poczatku*/
+
+
+
+.fun-out-cont section {
+    /*background-color: #00CCFF;*/
+
+
 }
 
-section {
-    height: 100vh;
-}
-
-/*janusz css*/
-.features {
+.function {
+    /*background-color: #1FAD9F;*/
+    width: 100%;
+    margin-bottom: 20px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: stretch;
-    height: 100vh;
-    padding-bottom: 2%;
-}
 
-.feature {
-    background-color: #1FAD9F;
-    color: white;
-    max-width: 800px;
-    width: 100%;
-    margin-top: 2%;
-    text-align: center;
-}
-
-.feature-image {
 
 }
+
+.function:last-of-type {
+    margin-bottom: 0px;
+}
+
+.icon {
+    width: 20%;
+}
+
+.function-text {
+    width: 50%;
+    ;
+}
+
+.function-text h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: rgb(5,178,247);
+}
+
+.function-text p {
+
+}
+
+
+/*janusz css*/
+/*.features {*/
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*flex-wrap: wrap;*/
+    /*align-content: stretch;*/
+    /*height: 100vh;*/
+    /*padding-bottom: 2%;*/
+/*}*/
+
+/*.feature {*/
+    /*background-color: #1FAD9F;*/
+    /*color: white;*/
+    /*max-width: 800px;*/
+    /*width: 100%;*/
+    /*margin-top: 2%;*/
+    /*text-align: center;*/
+/*}*/
+
+/*.feature-image {*/
+    /*color: white;*/
+    /*display: inline-block;*/
+    /*width: 30%;*/
+/*}*/
+
+/*.feature-container {*/
+    /*display: inline-block;*/
+    /*width: 60%;*/
+/*}*/
+
 /*janusz css*/
 
 
