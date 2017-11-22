@@ -257,7 +257,9 @@ nav a:hover {
 }
 
 .icon {
-    width: 20%;
+    font-size: 200px;
+    color: rgb(5, 178, 247);
+    /*width: 20%;*/
 }
 
 .function-text {
