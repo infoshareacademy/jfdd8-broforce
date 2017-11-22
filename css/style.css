@@ -21,7 +21,6 @@ body, h1, h2 {
 }
 nav {
     margin: 0 auto;
-    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,7 +49,6 @@ nav a:hover {
     background-color: white;
 }
 #top_logo {
-
     height: 40px;
 }
 
@@ -61,11 +59,13 @@ nav a:hover {
     align-items: center;
 }
 .desc-inn-cont img {
-    margin-top: 100px;
-    width: 100%;
+    margin-top: 150px;
+}
+.desc-img-ctnr {
+    width: 45%;
 }
 .desc-desc {
-    width: 50%;
+    width: 45%;
     height: 40%;
     display: flex;
     justify-content: center;
@@ -73,11 +73,11 @@ nav a:hover {
     align-items: flex-start;
 }
 .desc-desc h1 {
-    font-size: 110px;
+    font-size: 80px;
     font-weight: 900;
     text-transform: uppercase;
     color: white;
-    margin: 8px 0 30px 0;
+    margin: 10px 0;
 }
 .desc-desc h2 {
     font-size: 18px;
@@ -97,7 +97,7 @@ nav a:hover {
     border: 2px solid white;
     border-radius: 50px;
     padding: 17px 0;
-    margin-top: 50px;
+    margin-top: 30px;
     width: 40%;
     outline: none;
     font-weight: 700;
@@ -107,6 +107,76 @@ nav a:hover {
 }
 .desc-desc button:hover {
     background-color: white;
+}
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+    .desc-desc {
+        width: 50%;
+    }
+    .desc-inn-cont img {
+        margin-top: 100px;
+        width: 80%;
+    }
+    .desc-desc h1 {
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: white;
+        margin: 15px 0 15px 0;
+    }
+    .desc-desc h2 {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 18px;
+        color: rgb(255,254,58);
+    }
+}
+@media screen and (max-width: 800px) {
+    .top-background {
+        background-image: url("../images/top-back.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-bottom: 70px;
+    }
+    .nav-cont {
+    }
+    nav {
+    }
+    nav ul, li {
+         width: 100%;
+        display: inline;
+     }
+    .desc-inn-cont {
+        display: block;
+        padding-top: 200px;
+    }
+
+    .desc-desc {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .desc-img-ctnr {
+        width: 100%;
+    }
+    .desc-inn-cont img {
+        width: 100%;
+        margin-top: 85px;
+    }
+    .desc-desc h1 {
+        font-size: 30px;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: white;
+        margin: 15px 0 15px 0;
+    }
+    .desc-desc h2 {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: capitalize;
+        line-height: 18px;
+        color: rgb(255,254,58);
+    }
 }
 /*team*/
 .team-inn-cont {
@@ -238,7 +308,6 @@ button:hover {
     justify-content: center;
     background-color:#0CF;
     background-image: url(../images/sign-in-back1.jpg);
-    border-top: 0px solid #09F;
     overflow: hidden;
 }
 
