@@ -277,16 +277,19 @@ nav a:hover {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .function:last-of-type {
     margin-bottom: 0;
 }
 
+.icon-container {
+    width: 30%;
+}
+
 .icon {
-    font-size: 200px;
-    color: rgb(5, 178, 247);
-    /*width: 20%;*/
+    width: 80%;
 }
 
 .function-text {
@@ -306,6 +309,33 @@ nav a:hover {
 
 .icoright {
     order: 3;
+}
+
+@media (max-width: 800px) {
+    .icoright {
+        order: inherit;
+    }
+
+    .function-text {
+        width: 90%;
+        text-align: justify;
+    }
+
+    .icon-container {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-basis: 12em;
+
+    }
+
+    .function {
+        flex-direction: column-reverse;
+    }
+
+    .icon {
+        flex-basis: 80%;
+    }
 }
 
 /*sign in i footer nowe*/
