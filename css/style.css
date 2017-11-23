@@ -250,6 +250,7 @@ nav a:hover {
     margin-bottom: 20px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .function:last-of-type {
@@ -261,9 +262,8 @@ nav a:hover {
 }
 
 .icon {
-    width: 90%;
+    width: 80%;
 }
-
 
 .function-text {
     width: 50%;
@@ -284,7 +284,32 @@ nav a:hover {
     order: 3;
 }
 
+@media (max-width: 800px) {
+    .icoright {
+        order: inherit;
+    }
 
+    .function-text {
+        width: 90%;
+        text-align: justify;
+    }
+
+    .icon-container {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-basis: 12em;
+
+    }
+
+    .function {
+        flex-direction: column-reverse;
+    }
+
+    .icon {
+        flex-basis: 80%;
+    }
+}
 
 /*sign in i footer nowe*/
 input {
