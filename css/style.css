@@ -256,11 +256,14 @@ nav a:hover {
     margin-bottom: 0;
 }
 
-.icon {
-    font-size: 200px;
-    color: rgb(5, 178, 247);
-    /*width: 20%;*/
+.icon-container {
+    width: 30%;
 }
+
+.icon {
+    width: 90%;
+}
+
 
 .function-text {
     width: 50%;
@@ -280,6 +283,8 @@ nav a:hover {
 .icoright {
     order: 3;
 }
+
+
 
 /*sign in i footer nowe*/
 input {
