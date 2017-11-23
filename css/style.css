@@ -21,18 +21,23 @@ body, h1, h2 {
     width: 100%;
     z-index: 5;
     padding-top: 15px;
+    displaY: flex;
+    justify-content: space-between;
 }
 
 nav {
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     align-self: flex-start;
+    position: relative;
 }
 
 nav ul {
     list-style-type: none;
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 nav li {
@@ -125,8 +130,16 @@ nav a:hover {
 .desc-desc button:hover {
     background-color: white;
 }
-
+@media screen and (min-width: 801px) and (max-width: 901px) {
+    nav {font-size: 0.8em;}
+    .desc-desc {margin-top: 50px;}
+    #check-it-out {margin-top: 0; padding: 7px 0;}
+}
 @media screen and (min-width: 801px) and (max-width: 1200px) {
+    nav ul {
+    position: absolute;
+    top: 0;
+}
     .desc-desc {
         width: 50%;
     }
@@ -141,7 +154,7 @@ nav a:hover {
         font-weight: 900;
         text-transform: uppercase;
         color: white;
-        margin: 15px 0 15px 0;
+        margin: 0;
     }
 
     .desc-desc h2 {
@@ -151,6 +164,10 @@ nav a:hover {
         line-height: 18px;
         color: rgb(255, 254, 58);
     }
+    .desc-desc button {
+        margin-top: 20px;
+    }
+
 }
 
 @media screen and (max-width: 800px) {
@@ -160,21 +177,28 @@ nav a:hover {
         background-size: cover;
         padding-bottom: 70px;
     }
-
-    .nav-cont {
-    }
-
-    nav {
-    }
-
-    nav ul, li {
+    .logo-wrap {
         width: 100%;
-        display: inline;
+        display: flex;
+        justify-content: center;
     }
-
+    #top_logo {
+        height: 70px;
+    }
+    nav ul {
+        position: absolute;
+        top: 100px;
+        padding: 0 0 10px 0;
+        text-align: center;
+        border-bottom: 1px solid white;
+    }
+    nav li {
+        width: 100%;
+    }
     .desc-inn-cont {
         display: block;
-        padding-top: 200px;
+        padding-top: 300px;
+        width: 63%;
     }
 
     .desc-desc {
@@ -193,7 +217,7 @@ nav a:hover {
     }
 
     .desc-desc h1 {
-        font-size: 30px;
+        font-size: 40px;
         font-weight: 900;
         text-transform: uppercase;
         color: white;
@@ -206,6 +230,9 @@ nav a:hover {
         text-transform: capitalize;
         line-height: 18px;
         color: rgb(255, 254, 58);
+    }
+    .desc-desc button {
+        width: 65%;
     }
 }
 
