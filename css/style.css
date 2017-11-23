@@ -278,6 +278,11 @@ nav a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-align: justify;
+}
+
+.function:first-of-type {
+    margin-top: 20px;
 }
 
 .function:last-of-type {
@@ -294,6 +299,7 @@ nav a:hover {
 
 .function-text {
     width: 50%;
+
 }
 
 .function-text h3 {
