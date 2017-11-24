@@ -240,17 +240,18 @@ nav a:hover {
 .team-inn-cont {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    background: #783293;
+    width: 63%;
+    /*background: #783293;*/
 }
 
 .team-out-cont {
-    background-color: #1FAD9F;
+    /*background-color: #1FAD9F;*/
+    margin: 2% 0;
 }
 
 .team-member-cont {
     width: 20%;
-    background: #336699;
+    /*background: #336699;*/
     margin-right: 6%;
 }
 
@@ -258,8 +259,19 @@ nav a:hover {
     margin-right: 0;
 }
 
-.team-member-cont img {
+.team-member-cont img.profile_photo  {
     width: 100%;
+    border-radius: 50%;
+    border: 4px solid lightgray;
+ }
+
+.team-member-cont img.social_icon {
+    width: 30%;
+    text-align: center;
+}
+
+.team-member-cont > p {
+    text-align: center;
 }
 
 .foot-out-cont {
@@ -270,6 +282,11 @@ nav a:hover {
     background-color: #F6E4B5;
 }
 
+.social_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 /*funkcje*/
 
 .function {
