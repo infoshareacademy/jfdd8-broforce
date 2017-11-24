@@ -1,6 +1,9 @@
-body, h1, h2 {
+body {
     padding: 0;
     margin: 0;
+}
+
+h1, h2, p, li {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -233,6 +236,46 @@ nav a:hover {
     }
     .desc-desc button {
         width: 65%;
+    }
+}
+/*opis*/
+.opis-out-cont {
+    border-bottom: 1px solid lightgray;
+}
+.opis-inn-cont {
+    padding: 15px 0 40px 0;
+}
+.opis-inn-cont h2 {
+   color: #0099FF;
+    width: 100%
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+}
+.opis-paragraphs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: justify;
+}
+.opis-inn-cont p {
+    color: black;
+    width: 48%;
+    display: inline-block;
+    font-weight: 300;
+    line-height: 1.5em;
+}
+
+@media screen and (max-width: 800px) {
+    .opis-paragraphs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .opis-inn-cont p {
+        width: 100%;
     }
 }
 
