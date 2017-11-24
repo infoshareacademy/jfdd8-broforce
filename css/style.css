@@ -245,14 +245,13 @@ nav a:hover {
 }
 
 .team-out-cont {
-    /*background-color: #1FAD9F;*/
     margin: 2% 0;
 }
 
 .team-member-cont {
     width: 20%;
-    /*background: #336699;*/
     margin-right: 6%;
+    flex-grow: 1;
 }
 
 .team-inn-cont div:last-child {
@@ -287,6 +286,17 @@ nav a:hover {
     align-items: center;
     justify-content: space-evenly;
 }
+
+.team-heading > h2 {
+    text-align: center;
+    color: #0066CC;
+    width: 100%;
+    flex-grow: 4;
+}
+
+
+
+
 /*funkcje*/
 
 .function {
