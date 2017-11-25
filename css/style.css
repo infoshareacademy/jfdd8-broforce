@@ -241,7 +241,6 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     width: 63%;
-    /*background: #783293;*/
 }
 
 .team-out-cont {
@@ -251,7 +250,7 @@ nav a:hover {
 .team-member-cont {
     width: 20%;
     margin-right: 6%;
-    flex-grow: 1;
+
 }
 
 .team-inn-cont div:last-child {
@@ -291,9 +290,12 @@ nav a:hover {
     text-align: center;
     color: #0066CC;
     width: 100%;
-    flex-grow: 4;
 }
 
+
+@media (max-width: 800px) {
+
+}
 
 
 
