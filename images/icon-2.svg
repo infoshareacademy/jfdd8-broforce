@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="350px" height="350px" viewBox="-94.5 -20.943 350 350" enable-background="new -94.5 -20.943 350 350"
+	 xml:space="preserve">
+<defs>
+</defs>
+<path display="none" fill="#C7FFC9" d="M168.165,222.613c0,7.701-6.242,13.943-13.943,13.943H63.108
+	c-7.701,0-13.943-6.242-13.943-13.943V29.5c0-7.701,6.242-13.943,13.943-13.943h91.113c7.701,0,13.943,6.243,13.943,13.943V222.613z
+	"/>
+<path fill="none" stroke="#370D57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M3,48V26C3,13.297,13.297,3,26,3h109c12.701,0,23,10.297,23,23v139.5"/>
+<line fill="none" stroke="#370D57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="3" y1="64.5" x2="3" y2="58"/>
+<path fill="none" stroke="#370D57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+	M158,211.5V248c0,12.703-10.299,23-23,23H26c-12.703,0-23-10.297-23-23V73.834"/>
+<line fill="none" stroke="#370D57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="158" y1="177.5" x2="158" y2="199.5"/>
+<rect x="23" y="37" fill="none" stroke="#370D57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="115" height="187"/>
+<circle fill="none" stroke="#370D57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="80.5" cy="247" r="11.324"/>
+<line fill="none" stroke="#370D57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="67.338" y1="20.089" x2="93.662" y2="20.089"/>
+<line fill="none" stroke="#370D57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="57.479" y1="305.113" x2="112.813" y2="305.113"/>
+<line fill="none" stroke="#370D57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="44.479" y1="305.113" x2="27.146" y2="305.113"/>
+<line fill="none" stroke="#370D57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="126.833" y1="305.113" x2="133.854" y2="305.113"/>
+</svg>
