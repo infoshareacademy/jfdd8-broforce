@@ -134,6 +134,8 @@ nav a:hover {
     background-color: white;
     color: #05b2f7;
 }
+.animate-top {position:relative;animation:animatetop 0.4s}
+@keyframes animatetop {from{top:-300px;opacity:0} to{top:0;opacity:1}}
 @media screen and (min-width: 801px) and (max-width: 901px) {
     nav {font-size: 0.8em;}
     .desc-desc {margin-top: 50px;}
@@ -391,17 +393,16 @@ nav a:hover {
 .sign-in-desc h2 {
     margin: 0;
     width: 100%;
-    color: #05b2f7;
-    text-transform: uppercase;
+    color: #fefe46;
     text-align: center;
     font-weight: 400;
     font-size: 20px;
 }
 .sign-in-desc h3 {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 18px;
-    color: white;
+    color: #9696a1;
 }
 .bottom form {
     width: 100%;
@@ -411,7 +412,7 @@ nav a:hover {
     align-items: center;
 }
 .bottom input {
-    width: 330px;
+    width: 300px;
     border-radius: 5px;
     border: none;
     background: rgb(222,222,222);
@@ -420,23 +421,24 @@ nav a:hover {
     text-decoration: none;
     padding: 15px;
     margin-top: 20px;
+    color: #757390;
 }
 .bottom button {
     width: 330px;
     border-radius: 5px;
     border: none;
     padding: 15px;
-    background: #05b2f7;
+    background: #fefe46;
     margin: 5px 0;
     outline: none;
     cursor: pointer;
-    color: white;
+    color: #302f3d;
     font-weight: 500;
     text-transform: uppercase;
 }
 .bottom button:hover {
     background: white;
-    color: #05b2f7;
+    color: #302f3d;
 }
 .bottom button:active {
     background: white;
@@ -445,14 +447,13 @@ nav a:hover {
 .footer {
     width: 100%;
     display: flex;
-    justify-items: space-between;
-    color: #4d4b5d;
     padding-top: 30px;
+    color: #9696a1;
 }
 .copyrights {
     width: 50%;
     text-align: left;
-    color: #4d4b5d;
+    color: #9696a1;
     font-size: 15px;
 }
 .footer-links {
@@ -462,15 +463,15 @@ nav a:hover {
     align-items: center;
 }
 .footer-links a {
-    color: #4d4b5d;
+    color: #9696a1;
     font-size: 15px;
     text-decoration: none;
 }
 .footer-links a:hover {
-    color: white;
+    color: #fefe46;
 }
 .footer-links a:active {
-    color: #05b2f7;
+    color: #fefe46;
 }
 @media screen and (max-width: 1015px) {
     .copyrights, .footer {
