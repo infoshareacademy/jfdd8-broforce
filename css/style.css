@@ -3,7 +3,7 @@ body {
     margin: 0;
 }
 
-h1, h2, p, li {
+h1, h2, h3, p, li, a {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -124,7 +124,7 @@ nav a:hover {
     margin-top: 30px;
     width: 40%;
     outline: none;
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     color: white;
     cursor: pointer;
@@ -132,6 +132,7 @@ nav a:hover {
 
 .desc-desc button:hover {
     background-color: white;
+    color: #05b2f7;
 }
 @media screen and (min-width: 801px) and (max-width: 901px) {
     nav {font-size: 0.8em;}
@@ -170,9 +171,7 @@ nav a:hover {
     .desc-desc button {
         margin-top: 20px;
     }
-
 }
-
 @media screen and (max-width: 800px) {
     .top-background {
         background-image: url("../images/top-back.jpg");
@@ -230,7 +229,7 @@ nav a:hover {
     .desc-desc h2 {
         font-size: 12px;
         font-weight: 500;
-        text-transform: capitalize;
+        text-transform: uppercase;
         line-height: 18px;
         color: rgb(255, 254, 58);
     }
@@ -246,12 +245,12 @@ nav a:hover {
     padding: 15px 0 40px 0;
 }
 .opis-inn-cont h2 {
-   color: #0099FF;
+   color: #370d57;
     width: 100%;
     display: inline-block;
     text-align: center;
-    font-weight: 500;
-    font-size: 28px;
+    font-weight: 400;
+    font-size: 35px;
 }
 .opis-paragraphs {
     display: flex;
@@ -265,6 +264,8 @@ nav a:hover {
     display: inline-block;
     font-weight: 300;
     line-height: 1.5em;
+    font-size: 16px;
+    letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 800px) {
@@ -276,6 +277,67 @@ nav a:hover {
     }
     .opis-inn-cont p {
         width: 100%;
+    }
+}
+
+/*funkcje*/
+.fun-inn-ctnr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+    padding: 70px 0 30px 0;
+}
+.fun-inn-ctnr h2 {
+    width: 100%;
+    color: #370d57;
+    text-align: center;
+    font-weight: 400;
+    font-size: 35px;
+    margin: 0 0 25px 0;
+}
+.function {
+    width: 45%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.function h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #370d57;
+    text-transform: uppercase;
+    margin: 15px 0 0 0;
+}
+.function p {
+    color: black;
+    font-weight: 300;
+    line-height: 1.5em;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+.icon {
+    width: 40%;
+}
+
+.function-text {
+    width: 90%;
+}
+
+@media screen and (max-width: 800px) {
+    .fun-inn-ctnr {
+        margin-top: 30px;
+    }
+    .function {
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+    .function-text {
+        width: 100%
     }
 }
 
@@ -313,172 +375,122 @@ nav a:hover {
     background-color: #F6E4B5;
 }
 
-/*funkcje*/
-
-.function {
+/*sign in & footer*/
+.bottom-out-ctnr {
+    background: url("../images/bottom-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bottom {
+    padding: 230px 0 20px 0;
+}
+.sign-in-desc {
     width: 100%;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: justify;
-    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
-.function h3 {
-    font-size: 30px;
-    font-weight: 400;
-    color: #370d57;
+.sign-in-desc h2 {
+    margin: 0;
+    width: 100%;
+    color: #05b2f7;
     text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-size: 20px;
 }
-
-.function:first-of-type {
+.sign-in-desc h3 {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    color: white;
+}
+.bottom form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bottom input {
+    width: 330px;
+    border-radius: 5px;
+    border: none;
+    background: rgb(222,222,222);
+    background: #444352;
+    outline: none;
+    text-decoration: none;
+    padding: 15px;
     margin-top: 20px;
 }
-
-.function:last-of-type {
-    margin-bottom: 0;
-}
-
-.icon {
-    width: 20%;
-    margin: 30px;
-}
-
-.function-text {
-    width: 40%;
-}
-
-.function-text p {
-    font-family: Nunito, sans-serif;
-}
-
-.icoright {
-    order: 3;
-}
-
-@media (max-width: 800px) {
-    .icoright {
-        order: inherit;
-    }
-
-    .function-text {
-        width: 90%;
-        text-align: justify;
-    }
-
-    .icon-container {
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        flex-basis: 12em;
-
-    }
-
-    .function {
-        flex-direction: column-reverse;
-    }
-
-    .icon {
-        flex-basis: 80%;
-    }
-}
-
-/*sign in i footer nowe*/
-input {
-    border-radius: 50px;
-    border: 2px solid white;
+.bottom button {
+    width: 330px;
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
+    background: #05b2f7;
+    margin: 5px 0;
     outline: none;
-    text-decoration: none;
-    background: white;
-    padding: 10px;
-    width: 70%;
-    display: inline
-}
-
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-.sign-in {
-    height: 220px;
-    width: 60%;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;
-}
-
-form {
-    width: 40%;
-    justify-content: space-between;
-}
-
-h2 {
-    font-weight: 900;
-    text-transform: uppercase;
-    color: white;
-    letter-spacing: 1.5px;
-    font-size: 33px;
-}
-
-h3 {
-    font-weight: 400;
-    color: #036;
-}
-
-.flex {
-    display: flex;
-}
-
-.sign-in-ctnr button {
-    background: #6F6;
-    border: 2px solid white;
-    border-radius: 50px;
-    padding: 10px;
-    width: 40%;
-    outline: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: white;
     cursor: pointer;
-    margin-left: 15px;
-}
-
-button:hover {
-    background: white;
-    color: #06C;
-}
-
-.sign-in-ctnr {
-    justify-content: center;
-    background-color: #0CF;
-    background-image: url(../images/sign-in-back1.jpg);
-    overflow: hidden;
-}
-
-span {
-    font-weight: bold;
-}
-
-.footer-ctnr {
-    background: #09F;
-    justify-content: center;
-}
-
-.footer {
-    width: 60%;
-    height: 70px;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-}
-
-.footer p, a {
-    font-size: 0.8em;
-    color: #006;
-    display: inline;
-}
-
-.footer a:hover {
     color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.bottom button:hover {
+    background: white;
+    color: #05b2f7;
+}
+.bottom button:active {
+    background: white;
+    color: #05b2f7;
+}
+.footer {
+    width: 100%;
+    display: flex;
+    justify-items: space-between;
+    color: #4d4b5d;
+    padding-top: 30px;
+}
+.copyrights {
+    width: 50%;
+    text-align: left;
+    color: #4d4b5d;
+    font-size: 15px;
+}
+.footer-links {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.footer-links a {
+    color: #4d4b5d;
+    font-size: 15px;
+    text-decoration: none;
+}
+.footer-links a:hover {
+    color: white;
+}
+.footer-links a:active {
+    color: #05b2f7;
+}
+@media screen and (max-width: 1015px) {
+    .copyrights, .footer {
+        width: 100%;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .copyrights {
+        text-align: center;
+    }
+    .footer-links {
+        justify-content: center;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .bottom {
+        padding: 120px 0 20px 0;
+    }
 }
