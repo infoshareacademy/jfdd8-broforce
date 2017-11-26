@@ -490,10 +490,15 @@ nav a:hover {
 
     .team-member-cont {
         margin-right: 0;
-        width: 30%;
+        width: 60%;
         margin-bottom: 5%;
     }
+    .team-member-name {
+        min-height: 30px;
+    }
 
+    .team-description {
+        min-height: 40px;
 }
 
 /*funkcje*/
@@ -624,4 +629,4 @@ nav a:hover {
     .bottom {
         padding: 120px 0 20px 0;
     }
-}
+}}
