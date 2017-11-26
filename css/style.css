@@ -65,11 +65,9 @@ nav a:hover {
     background-color: white;
 }
 
-
 #top_logo {
     height: 40px;
 }
-
 
 /*zajawka*/
 .desc-inn-cont {
@@ -139,23 +137,44 @@ nav a:hover {
     background-color: white;
     color: #05b2f7;
 }
-.animate-top{
-    position:relative;animation:animatetop 0.4s
+
+.animate-top {
+    position: relative;
+    animation: animatetop 0.4s
 }
+
 @keyframes animatetop {
-    from{top:-300px;opacity:0}
-    to{top:0;opacity:1}
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
+
 @media screen and (min-width: 801px) and (max-width: 901px) {
-    nav {font-size: 0.8em;}
-    .desc-desc {margin-top: 50px;}
-    #check-it-out {margin-top: 0; padding: 7px 0;}
+    nav {
+        font-size: 0.8em;
+    }
+
+    .desc-desc {
+        margin-top: 50px;
+    }
+
+    #check-it-out {
+        margin-top: 0;
+        padding: 7px 0;
+    }
 }
+
 @media screen and (min-width: 801px) and (max-width: 1200px) {
     nav ul {
-    position: absolute;
-    top: 0;
-}
+        position: absolute;
+        top: 0;
+    }
+
     .desc-desc {
         width: 50%;
     }
@@ -180,10 +199,12 @@ nav a:hover {
         line-height: 18px;
         color: rgb(255, 254, 58);
     }
+
     .desc-desc button {
         margin-top: 20px;
     }
 }
+
 @media screen and (max-width: 800px) {
     .top-background {
         background-image: url("../images/top-back.jpg");
@@ -191,17 +212,21 @@ nav a:hover {
         background-size: cover;
         padding-bottom: 70px;
     }
+
     .logo-wrap {
         width: 100%;
         display: flex;
         justify-content: center;
     }
+
     #top_logo {
         height: 70px;
     }
+
     .nav-cont {
         position: absolute;
     }
+
     nav ul {
         position: absolute;
         top: 100px;
@@ -209,9 +234,11 @@ nav a:hover {
         text-align: center;
         border-bottom: 1px solid white;
     }
+
     nav li {
         width: 100%;
     }
+
     .desc-inn-cont {
         display: block;
         padding-top: 300px;
@@ -249,31 +276,37 @@ nav a:hover {
         color: rgb(255, 254, 58);
         margin-top: 30px;
     }
+
     .desc-desc button {
         width: 65%;
     }
 }
+
 /*opis*/
 .opis-out-cont {
     border-bottom: 1px solid lightgray;
 }
+
 .opis-inn-cont {
     padding: 15px 0 40px 0;
 }
+
 .opis-inn-cont h2 {
-   color: #370d57;
+    color: #370d57;
     width: 100%;
     display: inline-block;
     text-align: center;
     font-weight: 400;
     font-size: 35px;
 }
+
 .opis-paragraphs {
     display: flex;
     justify-content: space-between;
     width: 100%;
     text-align: justify;
 }
+
 .opis-inn-cont p {
     color: black;
     width: 48%;
@@ -291,6 +324,7 @@ nav a:hover {
         justify-content: space-between;
         width: 100%;
     }
+
     .opis-inn-cont p {
         width: 100%;
     }
@@ -305,6 +339,7 @@ nav a:hover {
     font-family: 'Roboto', sans-serif;
     padding: 70px 0 30px 0;
 }
+
 .fun-inn-ctnr h2 {
     width: 100%;
     color: #370d57;
@@ -313,6 +348,7 @@ nav a:hover {
     font-size: 35px;
     margin: 0 0 25px 0;
 }
+
 .function {
     width: 45%;
     text-align: center;
@@ -320,6 +356,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
 }
+
 .function h3 {
     font-size: 18px;
     font-weight: 500;
@@ -327,6 +364,7 @@ nav a:hover {
     text-transform: uppercase;
     margin: 15px 0 0 0;
 }
+
 .function p {
     color: black;
     font-weight: 300;
@@ -348,10 +386,12 @@ nav a:hover {
     .fun-inn-ctnr {
         margin-top: 30px;
     }
+
     .function {
         width: 100%;
         margin: 15px 0 0 0;
     }
+
     .function-text {
         width: 100%
     }
@@ -378,11 +418,11 @@ nav a:hover {
     margin-right: 0;
 }
 
-.team-member-cont img.profile_photo  {
+.team-member-cont img.profile_photo {
     width: 100%;
     border-radius: 50%;
-    border: 4px solid lightgray;
- }
+    border: 4px solid #370d57;
+}
 
 .team-member-cont img.social_icon {
     width: 30%;
@@ -407,10 +447,14 @@ nav a:hover {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .bottom {
     padding: 230px 0 20px 0;
 }
-.sign-in-desc {}
+
+.sign-in-desc {
+}
+
 .social_container {
     display: flex;
     align-items: center;
@@ -419,9 +463,12 @@ nav a:hover {
 
 .team-heading > h2 {
     text-align: center;
-
+    text-transform: capitalize;
     color: #370d57;
     width: 100%;
+    font-weight: 400;
+    font-size: 35px;
+    margin: 0 0 25px 0;
 }
 
 .team-member-name {
@@ -429,25 +476,23 @@ nav a:hover {
 }
 
 .team-description {
-min-height: 40px;
+    min-height: 60px;
 }
 
 @media (max-width: 800px) {
-.team-inn-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 63%;
-}
+    .team-inn-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 63%;
+    }
+
     .team-member-cont {
-    margin-right: 0;
+        margin-right: 0;
         width: 30%;
     }
 
-
 }
-
-
 
 /*funkcje*/
 
@@ -455,6 +500,7 @@ min-height: 40px;
     width: 100%;
     text-align: center;
 }
+
 .sign-in-desc h2 {
     margin: 0;
     width: 100%;
@@ -463,12 +509,14 @@ min-height: 40px;
     font-weight: 400;
     font-size: 20px;
 }
+
 .sign-in-desc h3 {
     font-size: 15px;
     font-weight: 300;
     line-height: 18px;
     color: #9696a1;
 }
+
 .bottom form {
     width: 100%;
     display: flex;
@@ -476,11 +524,12 @@ min-height: 40px;
     justify-content: center;
     align-items: center;
 }
+
 .bottom input {
     width: 300px;
     border-radius: 5px;
     border: none;
-    background: rgb(222,222,222);
+    background: rgb(222, 222, 222);
     background: #444352;
     outline: none;
     text-decoration: none;
@@ -488,6 +537,7 @@ min-height: 40px;
     margin-top: 20px;
     color: #757390;
 }
+
 .bottom button {
     width: 330px;
     border-radius: 5px;
@@ -501,60 +551,73 @@ min-height: 40px;
     font-weight: 500;
     text-transform: uppercase;
 }
+
 .bottom button:hover {
     background: white;
     color: #302f3d;
 }
+
 .bottom button:active {
     background: white;
     color: #05b2f7;
 }
+
 .footer {
     width: 100%;
     display: flex;
     padding-top: 30px;
     color: #9696a1;
 }
+
 .copyrights {
     width: 50%;
     text-align: left;
     color: #9696a1;
     font-size: 15px;
 }
+
 .footer-links {
     width: 50%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
+
 .footer-links a {
     color: #9696a1;
     font-size: 15px;
     text-decoration: none;
 }
+
 .footer-links a:hover {
     color: #fefe46;
 }
+
 .footer-links a:active {
     color: #fefe46;
 }
+
 @media screen and (max-width: 1015px) {
     .copyrights, .footer {
         width: 100%;
     }
+
     .footer {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
     .copyrights {
         text-align: center;
     }
+
     .footer-links {
         justify-content: center;
         width: 100%;
     }
 }
+
 @media screen and (max-width: 800px) {
     .bottom {
         padding: 120px 0 20px 0;
