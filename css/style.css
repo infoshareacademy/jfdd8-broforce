@@ -412,6 +412,7 @@ nav a:hover {
     width: 20%;
     margin-right: 6%;
 
+
 }
 
 .team-inn-cont div:last-child {
@@ -421,7 +422,7 @@ nav a:hover {
 .team-member-cont img.profile_photo {
     width: 100%;
     border-radius: 50%;
-    border: 4px solid #370d57;
+    border: 4px solid #e8e9ea;
 }
 
 .team-member-cont img.social_icon {
@@ -472,11 +473,11 @@ nav a:hover {
 }
 
 .team-member-name {
-    min-height: 20px;
+    min-height: 60px;
 }
 
 .team-description {
-    min-height: 60px;
+    min-height: 80px;
 }
 
 @media (max-width: 800px) {
@@ -490,6 +491,7 @@ nav a:hover {
     .team-member-cont {
         margin-right: 0;
         width: 30%;
+        margin-bottom: 5%;
     }
 
 }
