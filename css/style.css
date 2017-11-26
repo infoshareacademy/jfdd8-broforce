@@ -459,7 +459,7 @@ nav a:hover {
 .social_container {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .team-heading > h2 {
@@ -474,6 +474,7 @@ nav a:hover {
 
 .team-member-name {
     min-height: 60px;
+    font-weight: bold;
 }
 
 .team-description {
@@ -490,15 +491,28 @@ nav a:hover {
 
     .team-member-cont {
         margin-right: 0;
-        width: 60%;
+        width: 70%;
         margin-bottom: 5%;
     }
+
+    .team-member-cont img.profile_photo {
+        width: 70%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .team-member-cont img.social_icon {
+        width: 20%;
+        display: block;
+    }
+
     .team-member-name {
-        min-height: 30px;
+        min-height: 0;
     }
 
     .team-description {
-        min-height: 40px;
+        min-height: 0;
 }
 
 /*funkcje*/
