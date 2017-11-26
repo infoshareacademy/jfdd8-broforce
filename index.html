@@ -5,6 +5,7 @@
     <title>Szamello - Zamawiaj szamę z kolegami z pracy!</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900|Roboto:300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <script src="js\jquery-1.8.3.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -40,7 +41,7 @@
                 <button id="check-it-out">SPRAWDŹ</button>
             </content>
             <div class="desc-img-ctnr">
-                <img src="images/burger-boy.png" alt="Burger Boy" class="animate-top">
+                <img src="images/burger-boy.png" alt="Burger Boy" id="burger-boy" class="animate-top">
             </div>
         </section>
     </div>
@@ -121,6 +122,20 @@
         </div>
     </section>
 </div>
-
+<script>
+$(document).ready(function(){
+var scroll_start = 0;
+var startchange = $('.desc-desc');
+var offset = startchange.offset();
+$(document).scroll(function() {
+scroll_start = $(this).scrollTop();
+if(scroll_start > offset.top) {
+$('.nav-cont').css('background-color', '#370d57');
+} else {
+$('.nav-cont').css('background-color', 'transparent');
+}
+});
+});
+</script>
 </body>
 </html>

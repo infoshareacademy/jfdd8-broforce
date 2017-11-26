@@ -23,14 +23,13 @@ h1, h2, h3, p, li, a {
     top: 0;
     width: 100%;
     z-index: 5;
-    padding-top: 15px;
+    padding: 15px 0 10px 0;
     display: flex;
     justify-content: space-between;
 }
 
 nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     align-self: flex-start;
     position: relative;
@@ -41,11 +40,13 @@ nav ul {
     position: absolute;
     right: 0;
     top: 0;
+    margin: 0;
 }
 
 nav li {
     display: inline-block;
     text-transform: uppercase;
+    margin: 0;
 }
 
 nav a {
@@ -78,11 +79,13 @@ nav a:hover {
 }
 
 .desc-inn-cont img {
-    margin-top: 150px;
+    margin: 0;
+    padding: 0;
 }
 
 .desc-img-ctnr {
     width: 45%;
+    padding-top: 150px;
 }
 
 .desc-desc {
@@ -136,8 +139,13 @@ nav a:hover {
     background-color: white;
     color: #05b2f7;
 }
-.animate-top {position:relative;animation:animatetop 0.4s}
-@keyframes animatetop {from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.animate-top{
+    position:relative;animation:animatetop 0.4s
+}
+@keyframes animatetop {
+    from{top:-300px;opacity:0}
+    to{top:0;opacity:1}
+}
 @media screen and (min-width: 801px) and (max-width: 901px) {
     nav {font-size: 0.8em;}
     .desc-desc {margin-top: 50px;}
@@ -153,8 +161,8 @@ nav a:hover {
     }
 
     .desc-inn-cont img {
-        margin-top: 100px;
-        width: 80%;
+        margin-top: 50px;
+        width: 100%;
     }
 
     .desc-desc h1 {
