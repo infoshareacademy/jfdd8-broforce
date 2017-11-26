@@ -292,7 +292,25 @@ nav a:hover {
     width: 100%;
 }
 
+.team-member-name {
+}
+
+.team-description {
+
+}
+
 @media (max-width: 800px) {
+.team-inn-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 63%;
+}
+    .team-member-cont {
+    margin-right: 0;
+        width: 30%;
+    }
+
 
 }
 
