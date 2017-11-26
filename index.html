@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <title>Szamello - Zamawiaj szamę z kolegami z pracy!</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900|Roboto:300,400,500,700,900&amp;subset=latin-ext"
-          rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900|Roboto:300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
+    <script src="js\jquery-1.8.3.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
+
 <div class="top-background">
     <!-- navigation -->
     <div class="nav-cont">
@@ -32,7 +31,7 @@
 
 
     <!-- product description-->
-    <div class="desc-out-cont" id="desc">
+    <div class="desc-out-cont" id="opis">
         <section class="desc-inn-cont center">
             <content class="desc-desc">
                 <h2>Siedzisz w pracy i burczy Ci w brzuchu?</h2>
@@ -42,73 +41,56 @@
                 <button id="check-it-out">SPRAWDŹ</button>
             </content>
             <div class="desc-img-ctnr">
-                <img src="images/burger-boy.png" alt="Burger Boy" class="w3-animate-top">
+                <img src="images/burger-boy.png" alt="Burger Boy" id="burger-boy" class="animate-top">
             </div>
         </section>
     </div>
 </div>
 
+<div class="opis-out-cont">
+        <section class="opis-inn-cont center">
+        <h2>Poznaj Szamello!</h2>
+        <div class="opis-paragraphs">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a ipsum elit. Fusce elementum scelerisque gravida. Morbi pellentesque. Lorem ipsum dolor sit amet, consectetur, consectetur adipiscing.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a ipsum elit. Fusce elementum scelerisque gravida. Morbi pellentesque. Lorem ipsum dolor sit amet, consectetur, consectetur adipiscing.</p>
+        </div>
+    </section>
+</div>
+
 <!-- product functions -->
 <div class="fun-out-cont" id="product_func">
-    <section class="center">
+    <section class="fun-inn-ctnr center">
+        <h2>Jak to działa?</h2>
         <div class="function">
-            <div class="icon-container">
-                <img class="icon" src="images/iconmonstr-crosshair-10.svg" alt="">
-            </div>
+            <img class="icon" src="images/icon1.png" alt="">
             <div class="function-text">
                 <h3>Zbierz ekipę</h3>
-                <p>Stwórzcie swoje Szamo-profile. Stwórz swoje ulubione menu. Następnie zbierzcie głodnych. The path of
-                    the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil
-                    men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley
-                    of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike
-                    down upon thee with great vengeance and furious anger those who would attempt to poison and destroy
-                    My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.</p></div>
+                <p>Stwórzcie swoje Szamo-profile. Stwórz swoje ulubione menu. Następnie zbierzcie głodnych. The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity.</p>
+            </div>
         </div>
 
 
         <div class="function">
-            <div class="icon-container icoright">
-                <img class="icon" src="images/iconmonstr-bitcoin-6.svg" alt="">
-            </div>
+                <img class="icon icoright" src="images/icon2.png" alt="">
             <div class="function-text">
                 <h3>Zamów</h3>
-                <p>Wybór miejsca zamawiania jedzenia. losowy wybór osoby zamawiającej. The path of the righteous man is
-                    beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who,
-                    in the name of charity and good will, shepherds the weak through the valley of darkness, for he is
-                    truly his brother's keeper and the finder of lost children. And I will strike down upon thee with
-                    great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you
-                    will know My name is the Lord when I lay My vengeance upon thee.</p>
+                <p>Stwórzcie swoje Szamo-profile. Stwórz swoje ulubione menu. Następnie zbierzcie głodnych. The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity.</p>
             </div>
         </div>
 
-
         <div class="function">
-            <div class="icon-container">
-                <img class="icon" src="images/iconmonstr-checkout-2.svg" alt="">
-            </div>
+            <img class="icon" src="images/icon3.png" alt="">
             <div class="function-text">
                 <h3>Zapłać</h3>
-                <p>koszt zamówienia. naleznosc za posiłek. The path of the righteous man is beset on all sides by the
-                    iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and
-                    good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper
-                    and the finder of lost children. And I will strike down upon thee with great vengeance and furious
-                    anger those who would attempt to poison and destroy My brothers. And you will know My name is the
-                    Lord when I lay My vengeance upon thee.</p>
+                <p>Stwórzcie swoje Szamo-profile. Stwórz swoje ulubione menu. Następnie zbierzcie głodnych. The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity.</p>
             </div>
         </div>
 
         <div class="function">
-            <div class="icon-container icoright">
-                <img class="icon" src="images/logo1.svg" alt="">
-            </div>
+            <img class="icon icoright" src="images/icon4.png" alt="">
             <div class="function-text">
-                <h3>Szamello zadba o resztę</h3>
-                <p>Rozliczenia pomiędzy kolegami. System bilansowania długów: kto? komu? ile? The path of the righteous
-                    man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is
-                    he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for
-                    he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee
-                    with great vengeance and furious anger those who would attempt to poison and destroy My brothers.
-                    And you will know My name is the Lord when I lay My vengeance upon thee.</p>
+                <h3>Zajadaj!</h3>
+                <p>Stwórzcie swoje Szamo-profile. Stwórz swoje ulubione menu. Następnie zbierzcie głodnych. The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity.</p>
             </div>
         </div>
     </section>
@@ -162,35 +144,44 @@
 
         </div>
 
-    </section>
-</div>
 
-
-<div class="sign-in-ctnr flex">
-    <section class="sign-in flex">
+<!--sign in % stopka-->
+<div class="bottom-out-ctnr">
+    <section class="bottom center">
         <div class="sign-in-desc">
-            <h2>Zamawiaj szamę z szamello</h2>
-            <h3>Zostaw nam maila. Otrzymasz wcześniejszy dostęp do Szamello</h3>
+            <h2>Testuj Szamello beta</h2>
+            <h3>Zapisz się i otrzymaj wcześniejszy dostęp do aplikacji</h3>
         </div>
-        <form action="" class="flex">
+        <form action="">
             <input type="email" placeholder="Twój e-mail"/>
             <button>Wyślij</button>
         </form>
-
-    </section>
-</div>
-<div class="footer-ctnr flex" id="sign_in">
-    <section class="footer flex">
+        <div class="footer">
+            <div class="copyrights">
         <p>Wszystkie prawa zastrzeżone <span>Szamello &reg;</span> 2017</p>
-        <div>
+            </div>
+        <div class="footer-links">
             <a href="docs/Polityka%20prywatności.pdf">Polityka prywatności</a>
             <p style="margin: 0 10px 0 10px;">|</p>
             <a href="kontakt.html">Kontakt</a>
         </div>
-
+        </div>
     </section>
 </div>
-
-
+<script>
+$(document).ready(function(){
+var scroll_start = 0;
+var startchange = $('.desc-desc');
+var offset = startchange.offset();
+$(document).scroll(function() {
+scroll_start = $(this).scrollTop();
+if(scroll_start > offset.top) {
+$('.nav-cont').css('background-color', '#370d57');
+} else {
+$('.nav-cont').css('background-color', 'transparent');
+}
+});
+});
+</script>
 </body>
 </html>
