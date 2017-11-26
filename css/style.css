@@ -410,7 +410,7 @@ nav a:hover {
 .bottom {
     padding: 230px 0 20px 0;
 }
-.sign-in-desc {
+.sign-in-desc {}
 .social_container {
     display: flex;
     align-items: center;
@@ -419,15 +419,17 @@ nav a:hover {
 
 .team-heading > h2 {
     text-align: center;
-    color: #0066CC;
+
+    color: #370d57;
     width: 100%;
 }
 
 .team-member-name {
+    min-height: 20px;
 }
 
 .team-description {
-
+min-height: 40px;
 }
 
 @media (max-width: 800px) {
