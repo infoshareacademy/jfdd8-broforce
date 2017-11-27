@@ -139,24 +139,45 @@ nav a:hover {
     background-color: white;
     color: #05b2f7;
 }
-.animate-top{
+
+
+.animate-top {
     position: relative;
     animation: animatetop 0.4s
 }
+
 @keyframes animatetop {
-    from{top:-300px;opacity:0}
-    to{top:0;opacity:1}
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
+
 @media screen and (min-width: 801px) and (max-width: 901px) {
-    nav {font-size: 0.8em;}
-    .desc-desc {margin-top: 50px;}
-    #check-it-out {margin-top: 0; padding: 7px 0;}
+    nav {
+        font-size: 0.8em;
+    }
+
+    .desc-desc {
+        margin-top: 50px;
+    }
+
+    #check-it-out {
+        margin-top: 0;
+        padding: 7px 0;
+    }
 }
+
 @media screen and (min-width: 801px) and (max-width: 1200px) {
     nav ul {
-    position: absolute;
-    top: 0;
-}
+        position: absolute;
+        top: 0;
+    }
+
     .desc-desc {
         width: 50%;
     }
@@ -181,6 +202,7 @@ nav a:hover {
         line-height: 18px;
         color: rgb(255, 254, 58);
     }
+
     .desc-desc button {
         margin-top: 20px;
     }
@@ -192,17 +214,24 @@ nav a:hover {
         background-size: cover;
         padding-bottom: 70px;
     }
+
     .logo-wrap {
         width: 100%;
         display: flex;
         justify-content: center;
     }
+
     #top_logo {
         height: 70px;
     }
     .nav-cont {
         position: absolute;
     }
+
+    .nav-cont {
+        position: absolute;
+    }
+
     nav ul {
         position: absolute;
         top: 100px;
@@ -210,9 +239,11 @@ nav a:hover {
         text-align: center;
         border-bottom: 1px solid white;
     }
+
     nav li {
         width: 100%;
     }
+
     .desc-inn-cont {
         display: block;
         padding-top: 300px;
@@ -253,6 +284,7 @@ nav a:hover {
         color: rgb(255, 254, 58);
         margin-top: 30px;
     }
+
     .desc-desc button {
         width: 65%;
     }
@@ -366,7 +398,102 @@ nav a:hover {
 
 /*team*/
 
+.team-inn-cont {
+    display: flex;
+    justify-content: space-between;
+    width: 63%;
+}
 
+.team-out-cont {
+    margin: 2% 0;
+}
+
+.team-member-cont {
+    width: 20%;
+    margin-right: 6%;
+
+
+}
+
+.team-inn-cont div:last-child {
+    margin-right: 0;
+}
+
+.team-member-cont img.profile_photo {
+    width: 100%;
+    border-radius: 50%;
+    border: 4px solid #e8e9ea;
+}
+
+.team-member-cont img.social_icon {
+    width: 30%;
+    text-align: center;
+}
+
+.team-member-cont > p {
+    text-align: center;
+}
+
+.social_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-heading > h2 {
+    text-align: center;
+    text-transform: capitalize;
+    color: #370d57;
+    width: 100%;
+    font-weight: 400;
+    font-size: 35px;
+    margin: 0 0 25px 0;
+}
+
+.team-member-name {
+    min-height: 60px;
+    font-weight: 500;
+}
+
+.team-description {
+    min-height: 80px;
+}
+
+@media (max-width: 800px) {
+    .team-inn-cont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 63%;
+    }
+
+    .team-member-cont {
+        margin-right: 0;
+        width: 70%;
+        margin-bottom: 5%;
+    }
+
+    .team-member-cont img.profile_photo {
+        width: 70%;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .team-member-cont img.social_icon {
+        width: 20%;
+        display: block;
+    }
+
+    .team-member-name {
+        min-height: 0;
+    }
+
+    .team-description {
+        min-height: 0;
+    }
+
+}
 /*sign in & footer*/
 .bottom-out-ctnr {
     background: url("../images/bottom-back.jpg");
