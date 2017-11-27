@@ -65,9 +65,11 @@ nav a:hover {
     background-color: white;
 }
 
+
 #top_logo {
     height: 40px;
 }
+
 
 /*zajawka*/
 .desc-inn-cont {
@@ -138,6 +140,7 @@ nav a:hover {
     color: #05b2f7;
 }
 
+
 .animate-top {
     position: relative;
     animation: animatetop 0.4s
@@ -204,7 +207,6 @@ nav a:hover {
         margin-top: 20px;
     }
 }
-
 @media screen and (max-width: 800px) {
     .top-background {
         background-image: url("../images/top-back.jpg");
@@ -221,6 +223,9 @@ nav a:hover {
 
     #top_logo {
         height: 70px;
+    }
+    .nav-cont {
+        position: absolute;
     }
 
     .nav-cont {
@@ -254,10 +259,13 @@ nav a:hover {
     .desc-img-ctnr {
         width: 100%;
     }
-
+    .desc-img-ctnr {
+        width: 100%;
+        padding-top: 50px;
+    }
     .desc-inn-cont img {
         width: 100%;
-        margin-top: 85px;
+        margin-top: 50px;
     }
 
     .desc-desc h1 {
@@ -281,33 +289,27 @@ nav a:hover {
         width: 65%;
     }
 }
-
 /*opis*/
 .opis-out-cont {
     border-bottom: 1px solid lightgray;
-    /*padding-top: 60px;*/
 }
-
 .opis-inn-cont {
     padding: 15px 0 40px 0;
 }
-
 .opis-inn-cont h2 {
-    color: #370d57;
+   color: #370d57;
     width: 100%;
     display: inline-block;
     text-align: center;
     font-weight: 400;
     font-size: 35px;
 }
-
 .opis-paragraphs {
     display: flex;
     justify-content: space-between;
     width: 100%;
     text-align: justify;
 }
-
 .opis-inn-cont p {
     color: black;
     width: 48%;
@@ -325,13 +327,15 @@ nav a:hover {
         justify-content: space-between;
         width: 100%;
     }
-
     .opis-inn-cont p {
         width: 100%;
     }
 }
 
 /*funkcje*/
+.fun-out-cont {
+    border-bottom: 1px solid lightgray;
+}
 .fun-inn-ctnr {
     display: flex;
     justify-content: center;
@@ -340,7 +344,6 @@ nav a:hover {
     font-family: 'Roboto', sans-serif;
     padding: 70px 0 30px 0;
 }
-
 .fun-inn-ctnr h2 {
     width: 100%;
     color: #370d57;
@@ -349,11 +352,6 @@ nav a:hover {
     font-size: 35px;
     margin: 0 0 25px 0;
 }
-
-.fun-out-cont {
-    border-bottom: 1px solid lightgray;
-}
-
 .function {
     width: 45%;
     text-align: center;
@@ -361,7 +359,6 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
 }
-
 .function h3 {
     font-size: 18px;
     font-weight: 500;
@@ -369,7 +366,6 @@ nav a:hover {
     text-transform: uppercase;
     margin: 15px 0 0 0;
 }
-
 .function p {
     color: black;
     font-weight: 300;
@@ -391,18 +387,17 @@ nav a:hover {
     .fun-inn-ctnr {
         margin-top: 30px;
     }
-
     .function {
         width: 100%;
         margin: 15px 0 0 0;
     }
-
     .function-text {
         width: 100%
     }
 }
 
 /*team*/
+
 .team-inn-cont {
     display: flex;
     justify-content: space-between;
@@ -437,28 +432,6 @@ nav a:hover {
 
 .team-member-cont > p {
     text-align: center;
-}
-
-.foot-out-cont {
-    background-color: #F6E4B5;
-}
-
-.sign-out-cont {
-    background-color: #F6E4B5;
-}
-
-/*sign in & footer*/
-.bottom-out-ctnr {
-    background: url("../images/bottom-back.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.bottom {
-    padding: 230px 0 20px 0;
-}
-
-.sign-in-desc {
 }
 
 .social_container {
@@ -518,15 +491,22 @@ nav a:hover {
 
     .team-description {
         min-height: 0;
+    }
+
+
+/*sign in & footer*/
+.bottom-out-ctnr {
+    background: url("../images/bottom-back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-/*funkcje*/
-
-.function {
+.bottom {
+    padding: 230px 0 20px 0;
+}
+.sign-in-desc {
     width: 100%;
     text-align: center;
 }
-
 .sign-in-desc h2 {
     margin: 0;
     width: 100%;
@@ -535,14 +515,12 @@ nav a:hover {
     font-weight: 400;
     font-size: 20px;
 }
-
 .sign-in-desc h3 {
     font-size: 15px;
     font-weight: 300;
     line-height: 18px;
     color: #9696a1;
 }
-
 .bottom form {
     width: 100%;
     display: flex;
@@ -550,12 +528,11 @@ nav a:hover {
     justify-content: center;
     align-items: center;
 }
-
 .bottom input {
     width: 300px;
     border-radius: 5px;
     border: none;
-    background: rgb(222, 222, 222);
+    background: rgb(222,222,222);
     background: #444352;
     outline: none;
     text-decoration: none;
@@ -563,7 +540,6 @@ nav a:hover {
     margin-top: 20px;
     color: #757390;
 }
-
 .bottom button {
     width: 330px;
     border-radius: 5px;
@@ -577,75 +553,69 @@ nav a:hover {
     font-weight: 500;
     text-transform: uppercase;
 }
-
 .bottom button:hover {
     background: white;
     color: #302f3d;
 }
-
 .bottom button:active {
     background: white;
     color: #05b2f7;
 }
-
 .footer {
     width: 100%;
     display: flex;
     padding-top: 30px;
     color: #9696a1;
 }
-
 .copyrights {
     width: 50%;
     text-align: left;
     color: #9696a1;
     font-size: 15px;
 }
-
 .footer-links {
     width: 50%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-
 .footer-links a {
     color: #9696a1;
     font-size: 15px;
     text-decoration: none;
 }
-
 .footer-links a:hover {
     color: #fefe46;
 }
-
 .footer-links a:active {
     color: #fefe46;
 }
-
 @media screen and (max-width: 1015px) {
     .copyrights, .footer {
         width: 100%;
     }
-
     .footer {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     .copyrights {
         text-align: center;
     }
-
     .footer-links {
         justify-content: center;
         width: 100%;
     }
 }
-
 @media screen and (max-width: 800px) {
     .bottom {
         padding: 120px 0 20px 0;
     }
-}}
+    .footer-links p {
+        display: none;
+    }
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+    }
+}
