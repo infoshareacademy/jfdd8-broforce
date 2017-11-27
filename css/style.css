@@ -140,7 +140,8 @@ nav a:hover {
     color: #05b2f7;
 }
 .animate-top{
-    position:relative;animation:animatetop 0.4s
+    position: relative;
+    animation: animatetop 0.4s
 }
 @keyframes animatetop {
     from{top:-300px;opacity:0}
@@ -227,10 +228,13 @@ nav a:hover {
     .desc-img-ctnr {
         width: 100%;
     }
-
+    .desc-img-ctnr {
+        width: 100%;
+        padding-top: 50px;
+    }
     .desc-inn-cont img {
         width: 100%;
-        margin-top: 85px;
+        margin-top: 50px;
     }
 
     .desc-desc h1 {
@@ -297,6 +301,9 @@ nav a:hover {
 }
 
 /*funkcje*/
+.fun-out-cont {
+    border-bottom: 1px solid lightgray;
+}
 .fun-inn-ctnr {
     display: flex;
     justify-content: center;
@@ -358,49 +365,7 @@ nav a:hover {
 }
 
 /*team*/
-.team-inn-cont {
-    display: flex;
-    justify-content: space-between;
-    width: 63%;
-    /*background: #783293;*/
-}
 
-.team-out-cont {
-    margin: 2% 0;
-}
-
-.team-member-cont {
-    width: 20%;
-    margin-right: 6%;
-    flex-grow: 1;
-}
-
-.team-inn-cont div:last-child {
-    margin-right: 0;
-}
-
-.team-member-cont img.profile_photo  {
-    width: 100%;
-    border-radius: 50%;
-    border: 4px solid lightgray;
- }
-
-.team-member-cont img.social_icon {
-    width: 30%;
-    text-align: center;
-}
-
-.team-member-cont > p {
-    text-align: center;
-}
-
-.foot-out-cont {
-    background-color: #F6E4B5;
-}
-
-.sign-out-cont {
-    background-color: #F6E4B5;
-}
 
 /*sign in & footer*/
 .bottom-out-ctnr {
@@ -518,5 +483,12 @@ nav a:hover {
 @media screen and (max-width: 800px) {
     .bottom {
         padding: 120px 0 20px 0;
+    }
+    .footer-links p {
+        display: none;
+    }
+    .footer-links {
+        display: flex;
+        flex-direction: column;
     }
 }
