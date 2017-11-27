@@ -1,9 +1,6 @@
-body {
+body, h1, h2 {
     padding: 0;
     margin: 0;
-}
-
-h1, h2, p, li {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -238,71 +235,42 @@ nav a:hover {
         width: 65%;
     }
 }
-/*opis*/
-.opis-out-cont {
-    border-bottom: 1px solid lightgray;
-}
-.opis-inn-cont {
-    padding: 15px 0 40px 0;
-}
-.opis-inn-cont h2 {
-   color: #0099FF;
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    font-weight: 500;
-    font-size: 28px;
-}
-.opis-paragraphs {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    text-align: justify;
-}
-.opis-inn-cont p {
-    color: black;
-    width: 48%;
-    display: inline-block;
-    font-weight: 300;
-    line-height: 1.5em;
-}
-
-@media screen and (max-width: 800px) {
-    .opis-paragraphs {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-    }
-    .opis-inn-cont p {
-        width: 100%;
-    }
-}
 
 /*team*/
 .team-inn-cont {
     display: flex;
     justify-content: space-between;
-    width: 80%;
-    background: #783293;
+    width: 63%;
+    /*background: #783293;*/
 }
 
 .team-out-cont {
-    background-color: #1FAD9F;
+    margin: 2% 0;
 }
 
 .team-member-cont {
     width: 20%;
-    background: #336699;
     margin-right: 6%;
+    flex-grow: 1;
 }
 
 .team-inn-cont div:last-child {
     margin-right: 0;
 }
 
-.team-member-cont img {
+.team-member-cont img.profile_photo  {
     width: 100%;
+    border-radius: 50%;
+    border: 4px solid lightgray;
+ }
+
+.team-member-cont img.social_icon {
+    width: 30%;
+    text-align: center;
+}
+
+.team-member-cont > p {
+    text-align: center;
 }
 
 .foot-out-cont {
@@ -312,6 +280,22 @@ nav a:hover {
 .sign-out-cont {
     background-color: #F6E4B5;
 }
+
+.social_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.team-heading > h2 {
+    text-align: center;
+    color: #0066CC;
+    width: 100%;
+    flex-grow: 4;
+}
+
+
+
 
 /*funkcje*/
 
