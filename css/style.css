@@ -292,6 +292,7 @@ nav a:hover {
 /*opis*/
 .opis-out-cont {
     border-bottom: 1px solid lightgray;
+    padding-top: 70px;
 }
 .opis-inn-cont {
     padding: 15px 0 40px 0;
@@ -335,6 +336,8 @@ nav a:hover {
 /*funkcje*/
 .fun-out-cont {
     border-bottom: 1px solid lightgray;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .fun-inn-ctnr {
     display: flex;
@@ -406,6 +409,7 @@ nav a:hover {
 
 .team-out-cont {
     margin: 2% 0;
+    padding-top: 120px;
 }
 
 .team-member-cont {
