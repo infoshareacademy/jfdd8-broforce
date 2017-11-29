@@ -428,8 +428,6 @@ h1, h2, h3, p, li, a {
 .team-member-cont {
     width: 20%;
     margin-right: 6%;
-
-
 }
 
 .team-inn-cont div:last-child {
@@ -513,21 +511,29 @@ h1, h2, h3, p, li, a {
 }
 /*sign in & footer*/
 .bottom-out-ctnr {
-    background: url("../images/bottom-back.jpg");
+    background: #302f3d;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 170px;
+    height: 800px;
 }
 .bottom {
-    padding: 230px 0 20px 0;
+    padding-bottom: 20px;
 }
 .sign-in-desc {
     width: 100%;
     text-align: center;
+    background: #fefe46;
+    width: 60%;
+    padding: 70px 50px;
+    margin: 0 auto;
+    position: relative;
+    top: -70px;
 }
 .sign-in-desc h2 {
     margin: 0;
     width: 100%;
-    color: #fefe46;
+    color: #302f3d;
     text-align: center;
     font-weight: 400;
     font-size: 20px;
@@ -536,7 +542,7 @@ h1, h2, h3, p, li, a {
     font-size: 15px;
     font-weight: 300;
     line-height: 18px;
-    color: #9696a1;
+    color: #302f3d;
 }
 .bottom form {
     width: 100%;
@@ -548,9 +554,8 @@ h1, h2, h3, p, li, a {
 .bottom input {
     width: 300px;
     border-radius: 5px;
-    border: none;
-    background: rgb(222,222,222);
-    background: #444352;
+    border: 2px solid #302f3d;
+    background: transparent;
     outline: none;
     text-decoration: none;
     padding: 15px;
@@ -562,11 +567,11 @@ h1, h2, h3, p, li, a {
     border-radius: 5px;
     border: none;
     padding: 15px;
-    background: #fefe46;
+    background: #302f3d;
     margin: 5px 0;
     outline: none;
     cursor: pointer;
-    color: #302f3d;
+    color: #fefe46;
     font-weight: 500;
     text-transform: uppercase;
 }
