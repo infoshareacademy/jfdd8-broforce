@@ -426,9 +426,23 @@ nav a:hover {
 }
 
 .team-member-cont img.social_icon {
-    width: 30%;
+    width: 80%;
     text-align: center;
 }
+
+a.social_link {
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social_icon {
+    width: 80%;
+    text-align: center;
+    margin: 0;
+}
+
 
 .team-member-cont > p {
     text-align: center;
@@ -470,7 +484,9 @@ nav a:hover {
     .team-member-cont {
         margin-right: 0;
         width: 70%;
-        margin-bottom: 5%;
+        margin-top: 15%;
+        padding-bottom: 15%;
+        /*border-bottom: 1px solid #e8e9ea;*/
     }
 
     .team-member-cont img.profile_photo {
@@ -481,7 +497,7 @@ nav a:hover {
     }
 
     .team-member-cont img.social_icon {
-        width: 20%;
+        width: 75%;
         display: block;
     }
 
@@ -492,6 +508,7 @@ nav a:hover {
     .team-description {
         min-height: 0;
     }
+
 
 }
 /*sign in & footer*/
