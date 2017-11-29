@@ -509,6 +509,11 @@ a.social_link {
         min-height: 0;
     }
 
+    .team-border-bottom {
+        height: 1px;
+        border-bottom: 1px solid #e8e9ea;;
+    }
+
 
 }
 /*sign in & footer*/
