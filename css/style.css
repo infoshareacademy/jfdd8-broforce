@@ -28,14 +28,14 @@ h1, h2, h3, p, li, a {
     justify-content: space-between;
 }
 
-nav {
+.nav-wrap {
     display: flex;
     justify-content: space-between;
     align-self: flex-start;
     position: relative;
 }
 
-nav ul {
+.nav-wrap ul {
     list-style-type: none;
     position: absolute;
     right: 0;
@@ -43,13 +43,13 @@ nav ul {
     margin: 0;
 }
 
-nav li {
+.nav-wrap li {
     display: inline-block;
     text-transform: uppercase;
     margin: 0;
 }
 
-nav a {
+.nav-wrap a {
     text-decoration: none;
     font-size: 1em;
     font-weight: 400;
@@ -58,16 +58,29 @@ nav a {
     padding: 7px 20px;
     border-radius: 50px;
     display: inline-block;
+    -webkit-transition: .5s all ease-out;
+    -moz-transition: .5s all ease-out;
+    transition: .5s all ease-out;
 }
 
-nav a:hover {
-    color: rgb(5, 178, 247);
+.nav-wrap a:hover {
+    color: #370d57;
     background-color: white;
 }
-
+.nav-wrap li.active a {
+    color: white;
+    background-color: rgb(5, 178, 247);
+}
 
 #top_logo {
     height: 40px;
+}
+.logo-wrap a:hover {
+    background: transparent;
+}
+.logo-wrap a {
+    padding: 0;
+    margin: 0;
 }
 
 
