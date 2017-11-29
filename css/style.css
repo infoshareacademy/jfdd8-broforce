@@ -134,7 +134,7 @@ h1, h2, h3, p, li, a {
     color: white;
 }
 
-.desc-desc button {
+.desc-desc button,.desc-desc a {
     background-color: transparent;
     border: 2px solid white;
     border-radius: 50px;
@@ -146,11 +146,20 @@ h1, h2, h3, p, li, a {
     text-transform: uppercase;
     color: white;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 30px;
 }
 
-.desc-desc button:hover {
+.desc-desc button:hover,.desc-desc a:hover {
     background-color: white;
     color: #05b2f7;
+}
+.desc-desc div.buttons{
+    /*margin-top: 40px;*/
+    display: flex;
+    /*justify-content:flex-start;*/
+    /*width: 100%;*/
 }
 
 
