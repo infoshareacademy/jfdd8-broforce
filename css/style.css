@@ -134,7 +134,7 @@ h1, h2, h3, p, li, a {
     color: white;
 }
 
-.desc-desc button {
+.desc-desc a {
     background-color: transparent;
     border: 2px solid white;
     border-radius: 50px;
@@ -146,9 +146,12 @@ h1, h2, h3, p, li, a {
     text-transform: uppercase;
     color: white;
     cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+
 }
 
-.desc-desc button:hover {
+.desc-desc a:hover {
     background-color: white;
     color: #05b2f7;
 }
@@ -216,7 +219,7 @@ h1, h2, h3, p, li, a {
         color: rgb(255, 254, 58);
     }
 
-    .desc-desc button {
+    .desc-desc a {
         margin-top: 20px;
     }
 }
@@ -298,8 +301,10 @@ h1, h2, h3, p, li, a {
         margin-top: 30px;
     }
 
-    .desc-desc button {
-        width: 65%;
+    .desc-desc a {
+        width: 60%;
+        margin-top: 20px;
+        display: inline-block;
     }
 }
 /*opis*/
