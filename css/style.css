@@ -611,7 +611,10 @@ a.social_link {
     justify-content: space-between;
     color: white;
 }
-.content-col {
+.contact a {
+    color: white;
+}
+.contact-col {
     width: 30%;
     border-right: 1px solid white;
 }
