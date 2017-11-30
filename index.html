@@ -167,8 +167,10 @@
             <h2>Testuj Szamello beta</h2>
             <h3>Zapisz się i otrzymaj wcześniejszy dostęp do aplikacji</h3>
 
-            <form action="">
-                <input type="email" placeholder="Twój e-mail"/>
+            <form action="https://formspree.io/szamello.office@gmail.com" method="POST">
+                <input name="email" type="email" placeholder="Twój e-mail" required/>
+                <input type="hidden" name="_next" value="http://localhost:63342/jfdd8-broforce/thanks.html?_ijt=bg91i1donar78aa5rk3bp7uuor" />
+
                 <button>Wyślij</button>
             </form>
         </div>
