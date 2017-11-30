@@ -36,7 +36,7 @@
                 <h2>Siedzisz w pracy i burczy Ci w brzuchu?</h2>
                 <h1>SZAMELLO</h1>
                 <p>Nowa aplikacja do wspólnego zamawiania posiłków do pracy, która sprawi, że będzie to nie tylko łatwiejsze, ale i zabawniejsze!</p>
-                <button id="check-it-out">SPRAWDŹ</button>
+                <a href="#sign-in">ZAPISZ SIĘ</a>
             </content>
             <div class="desc-img-ctnr">
                 <img src="images/burger-boy.png" alt="Burger Boy" id="burger-boy" class="animate-top">
@@ -157,10 +157,11 @@
 
         </div>
     </section>
+    <div id="sign-in"></div>
 </div>
 
 <!--sign in % stopka-->
-<div class="bottom-out-ctnr" id="sign-in">
+<div class="bottom-out-ctnr">
     <section class="bottom center">
 
         <div class="sign-in-desc">
@@ -175,9 +176,25 @@
 
 
         <div class="contact">
-            <p>Testuj Szamello beta</p>
-            <p>Testuj Szamello beta</p>
-            <p>Testuj Szamello beta</p>
+            <div class="contact-col">
+                <h3>Aktualności</h3>
+                <ul>
+                    <li><a href="blog.html">Otwarta Beta już 1 stycznia</a></li>
+                    <li><a href="blog.html">Bartosza boli głowa</a></li>
+                    <li><a href="blog.html">Nowe funkcje Szamello</a></li>
+                    <li><a href="blog.html">Wywiad z twórcami Szamello</a></li>
+                </ul>
+            </div>
+            <div class="contact-col">
+
+            </div>
+            <div class="contact-col">
+                <h3>Kontakt</h3>
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+            </div>
         </div>
         <div class="footer">
             <div class="copyrights">
@@ -199,7 +216,7 @@ var offset = startchange.offset();
 $(document).scroll(function() {
 scroll_start = $(this).scrollTop();
 if(scroll_start > offset.top) {
-$('.nav-cont').css('background-color', '#370d57');
+$('.nav-cont').css('background-color', '#222e41');
 } else {
 $('.nav-cont').css('background-color', 'transparent');
 }

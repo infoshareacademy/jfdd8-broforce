@@ -134,7 +134,9 @@ h1, h2, h3, p, li, a {
     color: white;
 }
 
-.desc-desc button {
+
+.desc-desc a {
+    text-decoration: none;
     background-color: transparent;
     border: 2px solid white;
     border-radius: 50px;
@@ -146,9 +148,10 @@ h1, h2, h3, p, li, a {
     text-transform: uppercase;
     color: white;
     cursor: pointer;
+    text-align: center;
+    display: inline-block;
 }
-
-.desc-desc button:hover {
+.desc-desc a:hover {
     background-color: white;
     color: #05b2f7;
 }
@@ -216,7 +219,7 @@ h1, h2, h3, p, li, a {
         color: rgb(255, 254, 58);
     }
 
-    .desc-desc button {
+    .desc-desc a {
         margin-top: 20px;
     }
 }
@@ -298,7 +301,7 @@ h1, h2, h3, p, li, a {
         margin-top: 30px;
     }
 
-    .desc-desc button {
+    .desc-desc a {
         width: 65%;
     }
 }
@@ -510,12 +513,14 @@ h1, h2, h3, p, li, a {
 
 }
 /*sign in & footer*/
+#sign-in {
+    margin-top: 50px;
+}
 .bottom-out-ctnr {
-    background: #302f3d;
+    background: url("../images/bottom-back.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 170px;
-    height: 800px;
+    height: 700px;
 }
 .bottom {
     padding-bottom: 20px;
@@ -523,17 +528,18 @@ h1, h2, h3, p, li, a {
 .sign-in-desc {
     width: 100%;
     text-align: center;
-    background: #fefe46;
+    background: #05b2f7;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.3);
     width: 60%;
     padding: 70px 50px;
-    margin: 0 auto;
+    margin: 200px auto 0;
     position: relative;
     top: -70px;
 }
 .sign-in-desc h2 {
     margin: 0;
     width: 100%;
-    color: #302f3d;
+    color: white;
     text-align: center;
     font-weight: 400;
     font-size: 20px;
@@ -542,7 +548,7 @@ h1, h2, h3, p, li, a {
     font-size: 15px;
     font-weight: 300;
     line-height: 18px;
-    color: #302f3d;
+    color: white;
 }
 .bottom form {
     width: 100%;
@@ -560,7 +566,7 @@ h1, h2, h3, p, li, a {
     text-decoration: none;
     padding: 15px;
     margin-top: 20px;
-    color: #757390;
+    color: white;
 }
 .bottom button {
     width: 330px;
@@ -571,7 +577,7 @@ h1, h2, h3, p, li, a {
     margin: 5px 0;
     outline: none;
     cursor: pointer;
-    color: #fefe46;
+    color: white;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -582,6 +588,16 @@ h1, h2, h3, p, li, a {
 .bottom button:active {
     background: white;
     color: #05b2f7;
+}
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.content-col {
+    width: 30%;
+    border-right: 1px solid white;
 }
 .footer {
     width: 100%;
