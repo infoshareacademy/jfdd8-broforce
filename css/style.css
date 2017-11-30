@@ -372,7 +372,6 @@ nav a:hover {
     line-height: 1.5em;
     font-size: 16px;
     letter-spacing: 0.5px;
-    text-align: justify;
 }
 
 .icon {
@@ -411,8 +410,6 @@ nav a:hover {
 .team-member-cont {
     width: 20%;
     margin-right: 6%;
-
-
 }
 
 .team-inn-cont div:last-child {
@@ -469,10 +466,6 @@ a.social_link {
     font-weight: 500;
 }
 
-.team-description {
-    min-height: 80px;
-}
-
 @media (max-width: 800px) {
     .team-inn-cont {
         display: flex;
@@ -503,11 +496,7 @@ a.social_link {
         min-height: 0;
     }
 
-    .team-description {
-        min-height: 0;
-    }
-
-    .team-border-bottom {
+     .team-border-bottom {
         height: 1px;
         border-bottom: 1px solid #e8e9ea;
     }
