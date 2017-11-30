@@ -28,14 +28,14 @@ h1, h2, h3, p, li, a {
     justify-content: space-between;
 }
 
-nav {
+.nav-wrap {
     display: flex;
     justify-content: space-between;
     align-self: flex-start;
     position: relative;
 }
 
-nav ul {
+.nav-wrap ul {
     list-style-type: none;
     position: absolute;
     right: 0;
@@ -43,13 +43,13 @@ nav ul {
     margin: 0;
 }
 
-nav li {
+.nav-wrap li {
     display: inline-block;
     text-transform: uppercase;
     margin: 0;
 }
 
-nav a {
+.nav-wrap a {
     text-decoration: none;
     font-size: 1em;
     font-weight: 400;
@@ -58,16 +58,29 @@ nav a {
     padding: 7px 20px;
     border-radius: 50px;
     display: inline-block;
+    -webkit-transition: .5s all ease-out;
+    -moz-transition: .5s all ease-out;
+    transition: .5s all ease-out;
 }
 
-nav a:hover {
-    color: rgb(5, 178, 247);
+.nav-wrap a:hover {
+    color: #370d57;
     background-color: white;
 }
-
+.nav-wrap li.active a {
+    color: white;
+    background-color: rgb(5, 178, 247);
+}
 
 #top_logo {
     height: 40px;
+}
+.logo-wrap a:hover {
+    background: transparent;
+}
+.logo-wrap a {
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -121,7 +134,9 @@ nav a:hover {
     color: white;
 }
 
-.desc-desc button {
+
+.desc-desc a {
+    text-decoration: none;
     background-color: transparent;
     border: 2px solid white;
     border-radius: 50px;
@@ -133,9 +148,10 @@ nav a:hover {
     text-transform: uppercase;
     color: white;
     cursor: pointer;
+    text-align: center;
+    display: inline-block;
 }
-
-.desc-desc button:hover {
+.desc-desc a:hover {
     background-color: white;
     color: #05b2f7;
 }
@@ -203,7 +219,7 @@ nav a:hover {
         color: rgb(255, 254, 58);
     }
 
-    .desc-desc button {
+    .desc-desc a {
         margin-top: 20px;
     }
 }
@@ -285,13 +301,14 @@ nav a:hover {
         margin-top: 30px;
     }
 
-    .desc-desc button {
+    .desc-desc a {
         width: 65%;
     }
 }
 /*opis*/
 .opis-out-cont {
     border-bottom: 1px solid lightgray;
+    padding-top: 70px;
 }
 .opis-inn-cont {
     padding: 15px 0 40px 0;
@@ -335,6 +352,8 @@ nav a:hover {
 /*funkcje*/
 .fun-out-cont {
     border-bottom: 1px solid lightgray;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 .fun-inn-ctnr {
     display: flex;
@@ -405,6 +424,7 @@ nav a:hover {
 
 .team-out-cont {
     margin: 2% 0;
+    padding-top: 120px;
 }
 
 .team-member-cont {
@@ -509,22 +529,33 @@ a.social_link {
 
 }
 /*sign in & footer*/
+#sign-in {
+    margin-top: 50px;
+}
 .bottom-out-ctnr {
     background: url("../images/bottom-back.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    height: 700px;
 }
 .bottom {
-    padding: 230px 0 20px 0;
+    padding-bottom: 20px;
 }
 .sign-in-desc {
     width: 100%;
     text-align: center;
+    background: #05b2f7;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.3);
+    width: 60%;
+    padding: 70px 50px;
+    margin: 200px auto 0;
+    position: relative;
+    top: -70px;
 }
 .sign-in-desc h2 {
     margin: 0;
     width: 100%;
-    color: #fefe46;
+    color: white;
     text-align: center;
     font-weight: 400;
     font-size: 20px;
@@ -533,7 +564,7 @@ a.social_link {
     font-size: 15px;
     font-weight: 300;
     line-height: 18px;
-    color: #9696a1;
+    color: white;
 }
 .bottom form {
     width: 100%;
@@ -545,25 +576,24 @@ a.social_link {
 .bottom input {
     width: 300px;
     border-radius: 5px;
-    border: none;
-    background: rgb(222,222,222);
-    background: #444352;
+    border: 2px solid #302f3d;
+    background: transparent;
     outline: none;
     text-decoration: none;
     padding: 15px;
     margin-top: 20px;
-    color: #757390;
+    color: white;
 }
 .bottom button {
     width: 330px;
     border-radius: 5px;
     border: none;
     padding: 15px;
-    background: #fefe46;
+    background: #302f3d;
     margin: 5px 0;
     outline: none;
     cursor: pointer;
-    color: #302f3d;
+    color: white;
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -574,6 +604,16 @@ a.social_link {
 .bottom button:active {
     background: white;
     color: #05b2f7;
+}
+.contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.content-col {
+    width: 30%;
+    border-right: 1px solid white;
 }
 .footer {
     width: 100%;

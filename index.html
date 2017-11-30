@@ -10,19 +10,19 @@
 
 </head>
 <body>
-<div class="top-background">
+<div class="top-background" id="top">
     <!-- navigation -->
     <div class="nav-cont">
 
-        <nav class="center">
+        <nav class="nav-wrap center">
             <div class="logo-wrap">
-                <img src="images/logo1.svg" alt="Szamello!" id="top_logo">
+                <a href="#top" id="logo-link"><img src="images/logo1.svg" alt="Szamello!" id="top_logo"></a>
             </div>
             <ul>
                 <li><a href="#desc">Aplikacja</a></li>
                 <li><a href="#product_func">Funkcje</a></li>
                 <li><a href="#team">Zespół</a></li>
-                <li><a href="#sign_in">Subskrypcja</a></li>
+                <li><a href="#sign-in">Subskrypcja</a></li>
             </ul>
         </nav>
 
@@ -36,7 +36,7 @@
                 <h2>Siedzisz w pracy i burczy Ci w brzuchu?</h2>
                 <h1>SZAMELLO</h1>
                 <p>Nowa aplikacja do wspólnego zamawiania posiłków do pracy, która sprawi, że będzie to nie tylko łatwiejsze, ale i zabawniejsze!</p>
-                <button id="check-it-out">SPRAWDŹ</button>
+                <a href="#sign-in">ZAPISZ SIĘ</a>
             </content>
             <div class="desc-img-ctnr">
                 <img src="images/burger-boy.png" alt="Burger Boy" id="burger-boy" class="animate-top">
@@ -156,45 +156,121 @@
 
         </div>
     </section>
+    <div id="sign-in"></div>
 </div>
 
 <!--sign in % stopka-->
 <div class="bottom-out-ctnr">
     <section class="bottom center">
+
         <div class="sign-in-desc">
             <h2>Testuj Szamello beta</h2>
             <h3>Zapisz się i otrzymaj wcześniejszy dostęp do aplikacji</h3>
+
+            <form action="">
+                <input type="email" placeholder="Twój e-mail"/>
+                <button>Wyślij</button>
+            </form>
         </div>
-        <form action="">
-            <input type="email" placeholder="Twój e-mail"/>
-            <button>Wyślij</button>
-        </form>
+
+
+        <div class="contact">
+            <div class="contact-col">
+                <h3>Aktualności</h3>
+                <ul>
+                    <li><a href="blog.html">Otwarta Beta już 1 stycznia</a></li>
+                    <li><a href="blog.html">Bartosza boli głowa</a></li>
+                    <li><a href="blog.html">Nowe funkcje Szamello</a></li>
+                    <li><a href="blog.html">Wywiad z twórcami Szamello</a></li>
+                </ul>
+            </div>
+            <div class="contact-col">
+
+            </div>
+            <div class="contact-col">
+                <h3>Kontakt</h3>
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+                <p>Lorem ipsum</p>
+            </div>
+        </div>
         <div class="footer">
             <div class="copyrights">
-        <p>Wszystkie prawa zastrzeżone <span>Szamello &reg;</span> 2017</p>
+                <p>Wszystkie prawa zastrzeżone <span>Szamello &reg;</span> 2017</p>
             </div>
-        <div class="footer-links">
-            <a href="docs/Polityka%20prywatności.pdf">Polityka prywatności</a>
-            <p style="margin: 0 10px 0 10px;">|</p>
-            <a href="kontakt.html">Kontakt</a>
-        </div>
+            <div class="footer-links">
+                <a href="regulamin.html">Polityka prywatności</a>
+                <p style="margin: 0 10px 0 10px;">|</p>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
         </div>
     </section>
 </div>
 <script>
 $(document).ready(function(){
 var scroll_start = 0;
-var startchange = $('.desc-desc');
+var startchange = $('.desc-out-cont');
 var offset = startchange.offset();
 $(document).scroll(function() {
 scroll_start = $(this).scrollTop();
 if(scroll_start > offset.top) {
-$('.nav-cont').css('background-color', '#370d57');
+$('.nav-cont').css('background-color', '#222e41');
 } else {
 $('.nav-cont').css('background-color', 'transparent');
 }
 });
 });
+</script>
+<script>
+    jQuery(document).ready(function(jQuery) {
+        var topMenu = jQuery(".nav-wrap"),
+            offset = 40,
+            topMenuHeight = topMenu.outerHeight()+offset,
+            // All list items
+            menuItems =  topMenu.find('a[href*="#"]'),
+            // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function(){
+                var href = jQuery(this).attr("href"),
+                    id = href.substring(href.indexOf('#')),
+                    item = jQuery(id);
+                //console.log(item)
+                if (item.length) { return item; }
+            });
+
+        // so we can get a fancy scroll animation
+        menuItems.click(function(e){
+            var href = jQuery(this).attr("href"),
+                id = href.substring(href.indexOf('#'));
+            offsetTop = href === "#" ? 0 : jQuery(id).offset().top-topMenuHeight+1;
+            jQuery('html, body').stop().animate({
+                scrollTop: offsetTop
+            }, 300);
+            e.preventDefault();
+        });
+
+        // Bind to scroll
+        jQuery(window).scroll(function(){
+            // Get container scroll position
+            var fromTop = jQuery(this).scrollTop()+topMenuHeight;
+
+            // Get id of current scroll item
+            var cur = scrollItems.map(function(){
+                if (jQuery(this).offset().top < fromTop)
+                    return this;
+            });
+
+            // Get the id of the current element
+            cur = cur[cur.length-1];
+            var id = cur && cur.length ? cur[0].id : "";
+
+            menuItems.parent().removeClass("active");
+            if(id){
+                menuItems.parent().end().filter("[href*='#"+id+"']").parent().addClass("active");
+            }
+
+        })
+    })
 </script>
 </body>
 </html>
