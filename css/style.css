@@ -485,8 +485,6 @@ a.social_link {
         margin-right: 0;
         width: 70%;
         margin-top: 15%;
-        padding-bottom: 15%;
-        /*border-bottom: 1px solid #e8e9ea;*/
     }
 
     .team-member-cont img.profile_photo {
@@ -511,8 +509,13 @@ a.social_link {
 
     .team-border-bottom {
         height: 1px;
-        border-bottom: 1px solid #e8e9ea;;
+        border-bottom: 1px solid #e8e9ea;
     }
+
+    .social_container {
+        margin-bottom: 20%;
+    }
+
 
 
 }
