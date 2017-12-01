@@ -413,6 +413,23 @@ h1, h2, h3, p, li, a {
         width: 100%
     }
 }
+/*testimonials*/
+.testimonials {
+    width: 30%;
+    display: flex;
+    height: 200px;
+    background: blue;
+    margin-left: 30%;
+    border-radius: 10px 10px 15px 10px;
+
+}
+.testimonials_foto {
+
+    margin-left: 15%;
+    border-radius: 45%;
+    margin-top: 2%;
+    /*margin-bottom: -150px;*/
+}
 
 /*team*/
 
