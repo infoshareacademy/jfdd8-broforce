@@ -1,0 +1,30 @@
+body {
+    background-color: #302f3d;
+}
+
+h1 {
+    text-align: center;
+    color: #e8e9ea;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-screen {
+    width: 50vw;
+    height: 50vw;
+}
+
+.start-screen {
+    background-color: green;
+}
+
+.play-screen {
+    background-color: #05b2f7;
+}
+
+.end-screen {
+    background-color: aquamarine;
+}
