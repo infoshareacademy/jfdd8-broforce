@@ -17,13 +17,24 @@ h1 {
     height: 50vw;
 }
 
+
+/*start screen*/
+
 .start-screen {
     background-color: green;
 }
 
+.pacman-pic img {
+    width: 50px;
+}
+
+/*play screen*/
+
 .play-screen {
     background-color: #05b2f7;
 }
+
+/*end screen*/
 
 .end-screen {
     background-color: aquamarine;
