@@ -59,8 +59,6 @@
 
 <script>
 
-
-
     //przekierowanie do high-score ze start-screen
 
     $('#high-scores').click(function(){
@@ -72,6 +70,65 @@
     $('#start-button').click(function(){
         $('.start-screen, .end-screen').hide();
     })
+
+    // game play-board
+    function boardMaker(tagName) {
+        return document.createElement(tagName)
+    }
+
+    function createBoard(cells, sizeX, sizeY) {
+
+        var sizeX = 100;
+        var sizeY = 100;
+//        var i = 0;
+//        var j = 0;
+        var createRow = document.createElement('div');
+        var createColumn = document.createElement('div');
+        var board = boardMaker('section');
+        var rangeX = Array.from({ length: sizeX});
+        var rangeY = Array.from({ length: sizeY});
+
+        board.classList.add('table');
+    }
+
+
+
+//!!!!!!!!!!!!! wzór do przerobienia z zajęć!!!!!!!!!!!!!!!!!!!!!
+    function create(tagName) {
+        return document.createElement(tagName)
+    }
+
+    function createTable(cells, sizeX, sizeY) {
+        var table = create('section');
+
+        var rangeX = Array.from({ length: sizeX });
+        var rangeY = Array.from({ length: sizeY });
+
+        table.classList.add('table');
+        rangeY.forEach(function (_, y) {
+            var domNode = create('div');
+            rangeX.forEach(function (_, x) {
+                var domNode2 = create('div');
+
+                cells.forEach(function (cell) {
+                    if (y === cell.y && x === cell.x) {
+                        domNode2.classList.add(cell.className);
+                    }
+                });
+
+                domNode.appendChild(domNode2);
+            });
+            table.appendChild(domNode);
+        });
+
+        return table;
+    }
+
+    function showElement(parentId, element) {
+        document.getElementById(parentId).innerHTML = "";
+        document.getElementById(parentId).appendChild(element);
+    }
+
 
 </script>
 </body>
