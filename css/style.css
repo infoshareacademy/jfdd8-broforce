@@ -681,6 +681,8 @@ a.social_link {
 
 .header {
     width: 63%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .header ul {
@@ -705,17 +707,17 @@ a.social_link {
 }
 
 .header .logo {
-    display: block;
-    float: left;
-    font-size: 2em;
     padding: 10px 20px;
     text-decoration: none;
+}
+#logo {
+height: 40px;
 }
 
 /* menu */
 
 .header .menu {
-    clear: both;
+
     max-height: 0;
     transition: max-height .2s ease-out;
 }
@@ -725,14 +727,14 @@ a.social_link {
 .header .menu-icon {
     cursor: pointer;
     display: inline-block;
-    float: right;
+
     padding: 28px 20px;
     position: relative;
     user-select: none;
 }
 
 .header .menu-icon .navicon {
-    background: #333;
+    background: white;
     display: block;
     height: 2px;
     position: relative;
@@ -742,7 +744,7 @@ a.social_link {
 
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
-    background: #333;
+    background: white;
     content: '';
     display: block;
     height: 100%;
@@ -786,9 +788,9 @@ a.social_link {
     top: 0;
 }
 
-/* 48em = 768px */
+/* 48em nie rowna sie 768px */
 
-@media (min-width: 48em) {
+@media (min-width: 801px) {
     .header li {
         float: left;
     }
@@ -803,3 +805,21 @@ a.social_link {
     .header .menu-icon {
         display: none;
     }
+@media screen and (max-width: 800px) {
+.header {
+    display: flex;
+    flex-direction: column;
+    }
+.header .logo {
+    width: 100%;
+    float: none;
+}
+.header label {
+    width: 100%;
+    float: none;
+}
+
+}
+
+
+

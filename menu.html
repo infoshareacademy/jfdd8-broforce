@@ -17,13 +17,15 @@
         }
 
         /* header */
-
-        .header {
-            background-color: #fff;
-            box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+        .header-ctnr {
             position: fixed;
             width: 100%;
             z-index: 3;
+        }
+        .header {
+            background-color: #05b2f7;
+            width: 63%;
+            margin: 0 auto:
         }
 
         .header ul {
@@ -31,14 +33,13 @@
             padding: 0;
             list-style: none;
             overflow: hidden;
-            background-color: #fff;
         }
 
         .header li a {
             display: block;
             padding: 20px 20px;
-            border-right: 1px solid #f4f4f4;
             text-decoration: none;
+            color: white;
         }
 
         .header li a:hover,
@@ -150,8 +151,9 @@
     </style>
 </head>
 <body>
+<div class="header-ctnr">
 <header class="header">
-    <a href="" class="logo">CSS Nav</a>
+    <a href="" class="logo"><img src="images/logo1.svg" alt="Szamello!" style="height: 40px;"></a>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
@@ -161,5 +163,6 @@
         <li><a href="#contact">Contact</a></li>
     </ul>
 </header>
+</div>
 </body>
 </html>
