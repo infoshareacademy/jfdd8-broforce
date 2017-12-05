@@ -112,10 +112,10 @@
         document.getElementById(parentId).appendChild(element);
     }
 
+    // play-board applied to html
     var board = createBoard([], sizeX, sizeY);
     $('div.play-screen')
-        .prepend(board)
-        .css('display', 'flex');
+        .prepend(board);
 
 
     $('section.table div > div')

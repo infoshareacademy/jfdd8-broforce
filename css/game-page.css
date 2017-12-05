@@ -31,6 +31,7 @@ h1 {
 /*play screen*/
 
 .play-screen {
+    display: flex;
     background-color: #05b2f7;
     align-items: center;
     justify-content: center;
