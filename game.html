@@ -113,7 +113,15 @@
     }
 
     var board = createBoard([], sizeX, sizeY);
-    $('div.play-screen').prepend(board);
+    $('div.play-screen')
+        .prepend(board)
+        .css('display', 'flex');
+
+
+    $('section.table div > div')
+        .addClass('basicCell')
+
+
 
 
 ////!!!!!!!!!!!!! wzór do przerobienia z zajęć!!!!!!!!!!!!!!!!!!!!!

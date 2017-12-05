@@ -32,8 +32,28 @@ h1 {
 
 .play-screen {
     background-color: #05b2f7;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.table {
+    display: flex;
+    width: 700px;
+    height: 700px;
+    align-items: stretch;
+    flex-direction: column;
 }
 
+.table > div {
+    display: flex;
+    flex-grow: 1;
+}
+
+.table > div > div {
+    flex-grow: 1;
+    margin: 0;
+    border: 1px solid black;
+}
 /*end screen*/
 
 .end-screen {
