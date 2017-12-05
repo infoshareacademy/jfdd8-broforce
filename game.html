@@ -63,23 +63,26 @@
 
     $('#high-scores').click(function(){
         $('.start-screen, .play-screen').hide();
-    })
+    });
 
     // przekierowanie do play-screen ze start screen
 
     $('#start-button').click(function(){
         $('.start-screen, .end-screen').hide();
-    })
+    });
 
     // game play-board
+
+    var sizeX = 100;
+    var sizeY = 100;
+
     function boardMaker(tagName) {
         return document.createElement(tagName)
     }
 
     function createBoard(cells, sizeX, sizeY) {
 
-        var sizeX = 100;
-        var sizeY = 100;
+
 
 
         var board = boardMaker('section');
@@ -96,11 +99,11 @@
                     if (y === cell.y && x === cell.x){
                         createColumn = boardMaker('div');
                     }
-                })
+                });
                 createRow.appendChild(createColumn)
-            })
+            });
             board.appendChild(createRow)
-        })
+        });
         return board
     }
 
@@ -108,6 +111,9 @@
         document.getElementById(parentId).innerHTML = "";
         document.getElementById(parentId).appendChild(element);
     }
+
+    var board = createBoard([], sizeX, sizeY);
+    $('div.play-screen').prepend(board);
 
 
 ////!!!!!!!!!!!!! wzór do przerobienia z zajęć!!!!!!!!!!!!!!!!!!!!!
