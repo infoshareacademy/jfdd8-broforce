@@ -5,7 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/game-page.css" type="text/css">
+    <title>Szamello Monster</title>
 </head>
 <body>
 <header>
@@ -14,17 +15,115 @@
     </h1>
 </header>
 
+<div class="container">
 
-<div class="start-screen">
+    <div class="game-screen start-screen">
+        <div>
+            <img src="images/logo1.svg" alt="Szamello logo">
+        </div>
+        <div class="pacman-pic">
+            <img  src="images/pacman.png" alt="Pacman">
+        </div>
 
+
+        <div class="button">
+            <button id="start-button" type="button">start</button>
+            <button id="high-scores" type="button">high-scores</button>
+        </div>
+
+    </div>
+
+    <div class="game-screen play-screen">
+
+    </div>
+
+    <div class="game-screen end-screen">
+        <div class="high-scores">
+            <ol class="high-score-list">
+                <p>High-scores</p>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+
+    </div>
 </div>
 
-<div class="game-screen">
+<script src="js/jquery-1.8.3.min.js"></script>
 
-</div>
+<script>
 
-<div class="end-screen">
+    //przekierowanie do high-score ze start-screen
 
-</div>
+    $('#high-scores').click(function(){
+        $('.start-screen, .play-screen').hide();
+    });
+
+    // przekierowanie do play-screen ze start screen
+
+    $('#start-button').click(function(){
+        $('.start-screen, .end-screen').hide();
+    });
+
+    // game play-board
+
+    var sizeX = 30;
+    var sizeY = 30;
+
+    function boardMaker(tagName) {
+        return document.createElement(tagName)
+    }
+
+    function createBoard(cells, sizeX, sizeY) {
+
+
+
+
+        var board = boardMaker('section');
+        var rangeX = Array.from({ length: sizeX});
+        var rangeY = Array.from({ length: sizeY});
+
+        board.classList.add('table');
+        rangeY.forEach(function (_, y) {
+            var createRow = boardMaker('div');
+            rangeX.forEach(function (_, x) {
+                var createColumn = boardMaker('div');
+
+                cells.forEach(function (cell) {
+                    if (y === cell.y && x === cell.x){
+                        createColumn = boardMaker('div');
+                    }
+                });
+                createRow.appendChild(createColumn)
+            });
+            board.appendChild(createRow)
+        });
+        return board
+    }
+
+    function showElement(parentId, element) {
+        document.getElementById(parentId).innerHTML = "";
+        document.getElementById(parentId).appendChild(element);
+    }
+
+    // play-board applied to html
+    var board = createBoard([], sizeX, sizeY);
+    $('div.play-screen')
+        .prepend(board);
+
+
+    $('section.table div > div')
+        .addClass('basicCell')
+
+
+
+</script>
 </body>
 </html>
