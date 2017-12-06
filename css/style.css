@@ -414,22 +414,28 @@ h1, h2, h3, p, li, a {
     }
 }
 /*testimonials*/
-.testimonials {
-    width: 30%;
-    display: flex;
-    height: 200px;
-    background: blue;
-    margin-left: 30%;
-    border-radius: 10px 10px 15px 10px;
-
-}
-.testimonials_foto {
-
-    margin-left: 15%;
-    border-radius: 45%;
-    margin-top: 2%;
-    /*margin-bottom: -150px;*/
-}
+    .testimonial-container{
+        display: flex;
+    }
+    .mySlides {
+        display:;
+        width: 63%;
+        margin: auto;
+        }
+    .slides {
+        width: 100%;
+        height: 300px;
+        background: green;
+    }
+    .w3-left, .w3-right, .w3-badge {
+        cursor:pointer;
+        border-radius: 50%;
+    }
+    .w3-badge {
+        height:13px;
+        width:13px;
+        padding:0
+    }
 
 /*team*/
 
