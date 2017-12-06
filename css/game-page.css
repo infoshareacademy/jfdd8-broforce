@@ -55,8 +55,14 @@ h1 {
     margin: 0;
     border: 1px solid black;
 }
-/*end screen*/
+
+.pacMan {
+    background-color: #fefe46;
+    height: 100%;
+}
+
 
 .end-screen {
     background-color: aquamarine;
 }
+

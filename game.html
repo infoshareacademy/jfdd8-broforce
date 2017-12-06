@@ -74,17 +74,16 @@
 
     // game play-board
 
-    var sizeX = 30;
-    var sizeY = 30;
+    var sizeX = 20,
+        sizeY = 20,
+        directionX = 1,
+        directionY = 0;
 
     function boardMaker(tagName) {
         return document.createElement(tagName)
     }
 
     function createBoard(cells, sizeX, sizeY) {
-
-
-
 
         var board = boardMaker('section');
         var rangeX = Array.from({ length: sizeX});
@@ -98,7 +97,10 @@
 
                 cells.forEach(function (cell) {
                     if (y === cell.y && x === cell.x){
-                        createColumn = boardMaker('div');
+
+                        var createPacMan = boardMaker('div');
+                        $(createColumn).append(createPacMan);
+                        $(createPacMan).addClass(cell.className)
                     }
                 });
                 createRow.appendChild(createColumn)
@@ -112,11 +114,62 @@
         document.getElementById(parentId).innerHTML = "";
         document.getElementById(parentId).appendChild(element);
     }
+    // create pacMan
+    var pacMan = [{
+        x: 3,
+        y: 3,
+        className: 'pacMan'
+    }];
 
-    // play-board applied to html
-    var board = createBoard([], sizeX, sizeY);
-    $('div.play-screen')
-        .prepend(board);
+    // play-board applied to html +
+
+    setInterval(function(){
+
+        var board = createBoard(pacMan, sizeX, sizeY);
+        $('div.play-screen').html(board);
+
+        var pacHead = {
+            x: pacMan[0].x,
+            y: pacMan[0].y,
+            className: pacMan[0].className
+        };
+        var newPacHead = {
+            x: (pacHead.x + directionX + sizeX) % sizeX,
+            y: (pacHead.y + directionY + sizeY) % sizeY,
+            className: pacHead.className
+        };
+
+        pacMan.unshift(newPacHead);
+        pacMan.pop();
+    }, 100);
+
+
+    // navigation
+    window.addEventListener('keydown', function(event){
+
+        if (event.key === 'ArrowRight') {
+            directionX = 1;
+            directionY = 0;
+        }
+        if (event.key === 'ArrowLeft') {
+            directionX = -1;
+            directionY = 0;
+        }
+        if (event.key === 'ArrowUp') {
+            event.preventDefault();
+            directionY = -1;
+            directionX = 0;
+        }
+        if (event.key === 'ArrowDown') {
+            event.preventDefault();
+            directionY = 1;
+            directionX = 0;
+        }
+    });
+
+
+
+
 
 
     $('section.table div > div')
