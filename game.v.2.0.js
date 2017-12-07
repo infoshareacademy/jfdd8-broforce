@@ -36,7 +36,7 @@ $(document).ready(function () {
     }
 
     function createEgg($node) {
-        $node.addClass('burger')
+        // $node.addClass('burger')
     }
 
     function moveEggs() {
@@ -60,17 +60,16 @@ $(document).ready(function () {
     }
 
     function movePacManUp() {
-        $('.pacMan').removeClass('pacMan').prev().addClass('pacMan');
+        $('.pacMan').removeClass('pacMan').parent().prev().find('div').eq($(this).index()).addClass('pacMan');
     }
 
     function movePacManDown() {
-        $('.pacMan').removeClass('pacMan').prev().addClass('pacMan');
+        $('.pacMan').removeClass('pacMan').parent().next().find('div').eq($(this).index()).addClass('pacMan');
     }
 
     function detectCatch() {
-        if ($('.pacMan.egg').length > 0) {
-            console.log('CATCHED!')
-        }
+        // if ($('.pacMan.egg').length > 0) {
+        // }
     }
 
     function play() {
@@ -93,7 +92,7 @@ $(document).ready(function () {
                     movePacManDown();
                     break;
             }
-            detectCatch()
+            // detectCatch()
         });
 
         // gameIntervalId = setInterval(function () {
