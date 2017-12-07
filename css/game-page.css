@@ -37,34 +37,34 @@ h1 {
     justify-content: center;
     height: 100vh;
 }
-.table {
-    display: flex;
-    width: 700px;
-    height: 700px;
-    align-items: stretch;
-    flex-direction: column;
-}
+/*.table {*/
+    /*display: flex;*/
+    /*width: 700px;*/
+    /*height: 700px;*/
+    /*align-items: stretch;*/
+    /*flex-direction: column;*/
+/*}*/
 
-.table > div {
-    display: flex;
-    flex-grow: 1;
-}
+/*.table > div {*/
+    /*display: flex;*/
+    /*flex-grow: 1;*/
+/*}*/
 
-.table > div > div {
-    flex-grow: 1;
-    margin: 0;
-    border: 1px solid black;
-}
+/*.table > div > div {*/
+    /*flex-grow: 1;*/
+    /*margin: 0;*/
+    /*border: 1px solid black;*/
+/*}*/
 
-.pacMan {
-    background-color: #fefe46;
-    height: 100%;
-}
+/*.pacMan {*/
+    /*background-color: #fefe46;*/
+    /*height: 100%;*/
+/*}*/
 
-.burger {
-    background-color: red;
-    height: 100%;
-}
+/*.burger {*/
+    /*background-color: red;*/
+    /*height: 100%;*/
+/*}*/
 
 
 .end-screen {
