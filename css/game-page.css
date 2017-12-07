@@ -61,6 +61,11 @@ h1 {
     height: 100%;
 }
 
+.burger {
+    background-color: red;
+    height: 100%;
+}
+
 
 .end-screen {
     background-color: aquamarine;
