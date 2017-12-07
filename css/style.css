@@ -613,6 +613,18 @@ a.social_link {
 }
 .contact a {
     color: white;
+    text-decoration: none;
+}
+.contact a:hover, a:active {
+    color: #05b2f7;
+}
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.contact li {
+    padding-bottom: 10px;
 }
 .contact-col {
     width: 30%;
