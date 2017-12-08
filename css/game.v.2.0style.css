@@ -64,7 +64,7 @@ body {
 .table > div > div {
     flex-grow: 1;
     margin: 0;
-    border: 1px solid transparent;
+    border: 1px solid grey;
 }
 
 .pacMan {
