@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/game-page.css" type="text/css">
+    <link rel="stylesheet" href="css/game.v.2.0style.css" type="text/css">
+
     <title>Szamello Monster</title>
 </head>
 <body>
@@ -33,7 +35,7 @@
 
     </div>
 
-    <div class="game-screen play-screen">
+    <div class="game-screen play-screen" id="app">
 
     </div>
 
@@ -57,7 +59,7 @@
 </div>
 
 <script src="js/jquery-1.8.3.min.js"></script>
-
+<script src="game.v.2.0.js"></script>
 <script>
 
     //przekierowanie do high-score ze start-screen
@@ -71,58 +73,142 @@
     $('#start-button').click(function(){
         $('.start-screen, .end-screen').hide();
     });
-
-    // game play-board
-
-    var sizeX = 30;
-    var sizeY = 30;
-
-    function boardMaker(tagName) {
-        return document.createElement(tagName)
-    }
-
-    function createBoard(cells, sizeX, sizeY) {
-
-
-
-
-        var board = boardMaker('section');
-        var rangeX = Array.from({ length: sizeX});
-        var rangeY = Array.from({ length: sizeY});
-
-        board.classList.add('table');
-        rangeY.forEach(function (_, y) {
-            var createRow = boardMaker('div');
-            rangeX.forEach(function (_, x) {
-                var createColumn = boardMaker('div');
-
-                cells.forEach(function (cell) {
-                    if (y === cell.y && x === cell.x){
-                        createColumn = boardMaker('div');
-                    }
-                });
-                createRow.appendChild(createColumn)
-            });
-            board.appendChild(createRow)
-        });
-        return board
-    }
-
-    function showElement(parentId, element) {
-        document.getElementById(parentId).innerHTML = "";
-        document.getElementById(parentId).appendChild(element);
-    }
-
-    // play-board applied to html
-    var board = createBoard([], sizeX, sizeY);
-    $('div.play-screen')
-        .prepend(board);
-
-
-    $('section.table div > div')
-        .addClass('basicCell')
-
-
+//
+//    // game play-board
+//
+//    var sizeX = 20,
+//        sizeY = 20,
+//        directionX = 1,
+//        directionY = 0;
+//
+//    // create pacMan
+//    var pacMan = [{
+//        x: 3,
+//        y: 3,
+//        className: 'pacMan'
+//    }];
+//
+//    // create burger
+//    var burger = [{
+//        x: 1,
+//        y: 1,
+//        className: 'burger'
+//    }];
+//
+//    function boardMaker(tagName) {
+//        return document.createElement(tagName)
+//    }
+//
+//    function createBoard(cells, sizeX, sizeY, target) {
+//
+//        var board = boardMaker('section');
+//        var rangeX = Array.from({ length: sizeX});
+//        var rangeY = Array.from({ length: sizeY});
+//
+//        board.classList.add('table');
+//        rangeY.forEach(function (_, y) {
+//            var createRow = boardMaker('div');
+//            rangeX.forEach(function (_, x) {
+//                var createColumn = boardMaker('div');
+//
+//                cells.forEach(function (cell) {
+//                    if (y === cell.y && x === cell.x){
+//
+//                        var createPacMan = boardMaker('div');
+//                        $(createColumn).append(createPacMan);
+//                        $(createPacMan).addClass(cell.className);
+//
+//                        var createBurger = boardMaker('div');
+//                        $(createColumn).append(createBurger);
+//                        $(createBurger).addClass(cell.className)
+//                    }
+//                });
+//                createRow.appendChild(createColumn)
+//            });
+//            board.appendChild(createRow)
+//        });
+//        return board
+//    }
+//
+//    function showElement(parentId, element) {
+//        document.getElementById(parentId).innerHTML = "";
+//        document.getElementById(parentId).appendChild(element);
+//    }
+//    $('section.table div > div')
+//        .addClass('basicCell');
+//
+//    // play-board applied to html + pacMan moves
+//
+//    setInterval(function(){
+//
+//        var board = createBoard(pacMan, sizeX, sizeY);
+//        $('div.play-screen').html(board);
+//
+//        var pacHead = {
+//            x: pacMan[0].x,
+//            y: pacMan[0].y,
+//            className: pacMan[0].className
+//        };
+//        var newPacHead = {
+//            x: (pacHead.x + directionX + sizeX) % sizeX,
+//            y: (pacHead.y + directionY + sizeY) % sizeY,
+//            className: pacHead.className
+//        };
+//
+//        pacMan.unshift(newPacHead);
+//        pacMan.pop();
+//
+//    }, 100);
+//
+//    setInterval(function(){
+//
+//    var burgerHead = {
+//        x: burger[0].x,
+//        y: burger[0].y,
+//        className: burger[0].className
+//    };
+//    var newBurgerHead = {
+//        x: (burgerHead.x + directionX + sizeX) % sizeX,
+//        y: (burgerHead.y + directionY + sizeY) % sizeY,
+//        className: burgerHead.className
+//    };
+//
+//    burger.unshift(newBurgerHead);
+//    burger.pop();
+//
+//    }, 50);
+//
+//    // navigation
+//    window.addEventListener('keydown', function(event){
+//
+//        if (event.key === 'ArrowRight') {
+//            directionX = 1;
+//            directionY = 0;
+//        }
+//        if (event.key === 'ArrowLeft') {
+//            directionX = -1;
+//            directionY = 0;
+//        }
+//        if (event.key === 'ArrowUp') {
+//            event.preventDefault();
+//            directionY = -1;
+//            directionX = 0;
+//        }
+//        if (event.key === 'ArrowDown') {
+//            event.preventDefault();
+//            directionY = 1;
+//            directionX = 0;
+//        }
+//    });
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 </script>
 </body>
