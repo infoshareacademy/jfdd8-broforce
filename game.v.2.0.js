@@ -1,5 +1,21 @@
 $(document).ready(function () {
     var size = 11;
+    var walls = [
+        '             ',
+        ' ## ## ## ## ',
+        ' #         # ',
+        '   ## # ##   ',
+        ' #    #    # ',
+        ' # ## # ## # ',
+        '   #     #   ',
+        ' #   ###   # ',
+        ' # #     # # ',
+        '   ## # ##   ',
+        ' #         # ',
+        ' ## ## ## ## ',
+        '             '
+    ];
+
     var gameIntervalId;
     var eggsIntervalId;
     var $app = $('#app');
@@ -15,14 +31,13 @@ $(document).ready(function () {
         return Array.from({ length: size })
     }
 
+
     function createBoard() {
         return $('<div>').addClass('table').append(
-            range(size).map(function () {
-                return $('<div>').append(range(size).map(function () {
-                    return $('<div>')
+            walls.map(function (wall) {
+                return $('<div>').append(wall.split('').map(function (segment) {
+                    return $('<div>').addClass(segment === '#' ? 'wall' : null)
                 }))
-
-
             })
         );
     }
@@ -58,7 +73,7 @@ $(document).ready(function () {
         var $currentNode = $('.pacMan');
         var $targetNode = $currentNode.next();
 
-        if ($targetNode.length === 0) {
+        if ($targetNode.length === 0 || $targetNode.hasClass('wall')) {
             // skip
         } else {
             $currentNode.removeClass('pacMan');
@@ -70,7 +85,7 @@ $(document).ready(function () {
         var $currentNode = $('.pacMan');
         var $targetNode = $currentNode.prev();
 
-        if ($targetNode.length === 0) {
+        if ($targetNode.length === 0 || $targetNode.hasClass('wall')) {
             // skip
         } else {
             $currentNode.removeClass('pacMan');
@@ -82,7 +97,7 @@ $(document).ready(function () {
         var $currentNode = $('.pacMan');
         var $targetNode = $($currentNode.parent().prev().children()[$currentNode.index()]);
 
-        if ($targetNode.length === 0) {
+        if ($targetNode.length === 0 || $targetNode.hasClass('wall')) {
             // skip
         } else {
             $currentNode.removeClass('pacMan');
@@ -94,7 +109,7 @@ $(document).ready(function () {
         var $currentNode = $('.pacMan');
         var $targetNode = $($currentNode.parent().next().children()[$currentNode.index()]);
 
-        if ($targetNode.length === 0) {
+        if ($targetNode.length === 0 || $targetNode.hasClass('wall')) {
             // skip
         } else {
             $currentNode.removeClass('pacMan');
