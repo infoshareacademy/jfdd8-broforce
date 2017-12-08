@@ -7,7 +7,7 @@ $(document).ready(function () {
     $app.append($board);
 
     var $pacManPosition = $('.table > div:last > div').eq(4);
-    createPacMan($pacManPosition);
+    createBasket($pacManPosition);
 
     play();
 
@@ -25,19 +25,19 @@ $(document).ready(function () {
         );
     }
 
-    function drawEggStartingPosition() {
-        return $('.table div:first div').eq(
-            Math.floor(Math.random() * size)
-        )
+    // function drawEggStartingPosition() {
+    //     return $('.table div:first div').eq(
+    //         Math.floor(Math.random() * size)
+    //     )
+    // }
+
+    function createBasket($node) {
+        $node.addClass('basket')
     }
 
-    function createPacMan($node) {
-        $node.addClass('pacMan')
-    }
-
-    function createEgg($node) {
-        // $node.addClass('burger')
-    }
+    // function createEgg($node) {
+    //     $node.addClass('egg')
+    // }
 
     function moveEggs() {
         $('.egg').each(function () {
@@ -64,17 +64,18 @@ $(document).ready(function () {
     }
 
     function movePacManDown() {
-        $('.pacMan').removeClass('pacMan').parent().next().find('div').eq($(this).index()).addClass('pacMan');
+        $('.pacMan').removeClass('pacMan').parent().next().find('div') .eq($(this).index()).addClass('pacMan');
     }
 
     function detectCatch() {
-        // if ($('.pacMan.egg').length > 0) {
-        // }
+        if ($('.pacMan.egg').length > 0) {
+            console.log('CATCHED!')
+        }
     }
 
     function play() {
         $(window).on('keyup', function (event) {
-
+            // console.log(event.keyCode);
             switch (event.keyCode) {
                 case 39:
                     movePacManRight();
@@ -92,13 +93,13 @@ $(document).ready(function () {
                     movePacManDown();
                     break;
             }
-            // detectCatch()
+            detectCatch()
         });
 
-        // gameIntervalId = setInterval(function () {
-        //     moveEggs();
-        //     detectCatch();
-        // }, 300);
+        gameIntervalId = setInterval(function () {
+            moveEggs();
+            detectCatch();
+        }, 300);
 
         // eggsIntervalId = setInterval(function () {
         //     var $eggPosition = drawEggStartingPosition();
