@@ -11,7 +11,10 @@ body {
     height: 500px;
     align-items: stretch;
     flex-direction: column;
+    border: 1px solid black;
 }
+
+
 
 .table > div {
     display: flex;
@@ -20,8 +23,8 @@ body {
 
 .table > div > div {
     flex-grow: 1;
-    margin: 10px;
-    border: 1px solid black;
+    margin: 0;
+    border: 1px solid transparent;
 }
 
 .pacMan {

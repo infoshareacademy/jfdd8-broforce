@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var size = 10;
+    var size = 11;
     var gameIntervalId;
     var eggsIntervalId;
     var $app = $('#app');
