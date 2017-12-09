@@ -22,8 +22,9 @@ $(document).ready(function () {
     var $board = createBoard();
     $app.append($board);
 
-    var $pacManPosition = $('.table > div:last > div').eq(4);
+    var $pacManPosition = $('.table > div:nth-child(7) > div').eq(6);
     createPacMan($pacManPosition);
+    createDots();
 
     play();
 
@@ -50,6 +51,15 @@ $(document).ready(function () {
 
     function createPacMan($node) {
         $node.addClass('pacMan')
+    }
+
+    function createDots() {
+        walls.filter(function (wall) {
+            return wall.class === wall ? null : $('walls').addClass('dots');
+            // return $('wall.*:contains("#")') ? null : $('walls').addClass('dots');
+        })
+
+
     }
 
     // function createEgg($node) {

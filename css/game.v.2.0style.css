@@ -1,5 +1,8 @@
+/*material design color scheme https://material.io/color/#!/?view.left=0&view.right=0&primary.color=039BE5*/
+
 body {
     background-color: #302f3d;
+
 }
 
 h1 {
@@ -7,16 +10,16 @@ h1 {
     color: #e8e9ea;
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    min-height: 320px;
+    min-width: 320px;
+    width: 80vh;
+    height: 80vh;
+    margin: auto;
 }
 
 .game-screen {
-    width: 80vw;
-    height: 80vw;
-    min-height: 360px;
-    min-height: 360px;
+
+
 }
 
 /*start screen*/
@@ -40,10 +43,10 @@ h1 {
 
 .table {
     display: flex;
-    min-height: 360px;
-    min-height: 360px;
-    /*width: 500px;*/
-    /*height: 500px;*/
+    min-height: 320px;
+    min-width: 320px;
+    width: 500px;
+    height: 500px;
     align-items: stretch;
     flex-direction: column;
     border: 1px solid black;
@@ -59,13 +62,21 @@ h1 {
 .table > div > div {
     flex-grow: 1;
     margin: 0;
-    border: 0 solid transparent;
+    border: 0 solid grey;
 }
 
 .pacMan {
     background: yellow;
     border-radius: 100%;
 }
+
+.dots {
+    background-color: #B71C1C;
+    width: 10%;
+    height: 10%;
+    border-radius: 100%;
+}
+
 
 .burger {
     background: #0c0;
