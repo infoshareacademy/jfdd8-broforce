@@ -48,7 +48,7 @@
     <div class="game-screen end-screen">
         <div class="high-scores">
             <ol class="high-score-list">
-                <p>High-scores</p>
+                <h2>High-scores</h2>
                 <li></li>
                 <li></li>
                 <li></li>
@@ -94,12 +94,14 @@
     $('#restart-button').click(function () {
         $('.start-screen, .end-screen').hide();
         $('.play-screen').show();
-    })
+    });
 
     $('#home-button').click(function () {
         $('.play-screen, .end-screen').hide();
         $('.start-screen').show();
-    })
+    });
+
+    $('.burger').addClass('icono-smile');
 
 
 </script>

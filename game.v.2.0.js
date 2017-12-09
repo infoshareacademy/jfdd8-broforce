@@ -24,9 +24,12 @@ $(document).ready(function () {
 
     var $pacManPosition = $('.table > div:nth-child(7) > div').eq(6);
     createPacMan($pacManPosition);
-    createDots();
+
+
 
     play();
+
+
 
     function range(size) {
         return Array.from({ length: size })
@@ -37,7 +40,7 @@ $(document).ready(function () {
         return $('<div>').addClass('table').append(
             walls.map(function (wall) {
                 return $('<div>').append(wall.split('').map(function (segment) {
-                    return $('<div>').addClass(segment === '#' ? 'wall' : null)
+                    return $('<div>').addClass(segment === '#' ? 'wall' : 'dots')
                 }))
             })
         );
@@ -53,14 +56,7 @@ $(document).ready(function () {
         $node.addClass('pacMan')
     }
 
-    function createDots() {
-        walls.filter(function (wall) {
-            return wall.class === wall ? null : $('walls').addClass('dots');
-            // return $('wall.*:contains("#")') ? null : $('walls').addClass('dots');
-        })
 
-
-    }
 
     // function createEgg($node) {
     //     $node.addClass('egg')
@@ -157,6 +153,13 @@ $(document).ready(function () {
             }
             detectCatch()
         })
+        var $consumptionNode = $('div.pacMan.dots');
+        if ($consumptionNode.length === 1) {
+            $consumptionNode.removeClass('dots');
+        };
+
+        $(window).on('keydown', function (event) {
+            event.preventDefault(); })
     }
 
         gameIntervalId = setInterval(function () {

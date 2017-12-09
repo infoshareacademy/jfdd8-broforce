@@ -1,14 +1,14 @@
 /*material design color scheme https://material.io/color/#!/?view.left=0&view.right=0&primary.color=039BE5*/
 
 body {
-    background-color: #302f3d;
-
+    background-color: #029be5;
 }
 
 h1 {
     text-align: center;
     color: #e8e9ea;
 }
+
 .container {
     min-height: 320px;
     min-width: 320px;
@@ -18,25 +18,22 @@ h1 {
 }
 
 .game-screen {
-
-
+    background-color: #63ccff
 }
 
 /*start screen*/
 
 .start-screen {
-    background-color: green;
+    ;
 }
 
 .pacman-pic img {
     width: 50px;
 }
 
-
 /*play screen*/
 .play-screen {
     display: none;
-    background-color: #05b2f7;
     align-items: center;
     justify-content: center;
 }
@@ -49,10 +46,8 @@ h1 {
     height: 500px;
     align-items: stretch;
     flex-direction: column;
-    border: 1px solid black;
+    border: 0 solid transparent;
 }
-
-
 
 .table > div {
     display: flex;
@@ -62,34 +57,35 @@ h1 {
 .table > div > div {
     flex-grow: 1;
     margin: 0;
-    border: 0 solid grey;
-}
-
-.pacMan {
-    background: yellow;
-    border-radius: 100%;
+    border: 0 solid transparent;
 }
 
 .dots {
-    background-color: #B71C1C;
-    width: 10%;
-    height: 10%;
-    border-radius: 100%;
+    /*background-color: #B71C1C;*/
+    background-image: url("../images/icons/hamburger.png");
+    background-position: 50% 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
 }
 
+.pacMan {
+    background-image: url("../images/icons/cutlery (1).png");
+    background-position: 50% 50%;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
 
 .burger {
-    background: #0c0;
+
+    /*background: #0c0;*/
 }
 
 .wall {
-    background: black;
+    background-color: #029be5;
 }
-
 
 /*end-screen*/
 
 .end-screen {
     display: none;
-    background-color: aquamarine;
 }
