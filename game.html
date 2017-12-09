@@ -12,7 +12,7 @@
 <body>
 <header>
     <h1>
-        Dziękujemy za wysłanie maila! Pograj sobie :)
+        Dziękujemy za suba! Zagraj w grę ;)
     </h1>
 </header>
 
@@ -81,24 +81,24 @@
 
     $('#high-scores, #finish-button').click(function(){
         $('.start-screen, .play-screen').hide();
-        $('.end-screen').show();
+        $('.end-screen').show().css('display', 'flex');
     });
 
     // start/end screen to play-screen
 
     $('#start-button').click(function(){
         $('.start-screen, .end-screen').hide();
-        $('.play-screen').show();
+        $('.play-screen').show().css('display', 'flex');
     });
 
     $('#restart-button').click(function () {
         $('.start-screen, .end-screen').hide();
-        $('.play-screen').show();
+        $('.play-screen').show().css('display', 'flex');
     });
 
     $('#home-button').click(function () {
         $('.play-screen, .end-screen').hide();
-        $('.start-screen').show();
+        $('.start-screen').show().css('display', 'flex');
     });
 
     $('.burger').addClass('icono-smile');

@@ -6,7 +6,7 @@ body {
     flex-direction: column;
 }
 
-h1 {
+h1, h2, ol{
     text-align: center;
     color: white;
     font-family: 'Nunito', sans-serif;
@@ -25,6 +25,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    height: 80vh;
 }
 
 /*start screen*/
@@ -71,6 +73,7 @@ h1 {
 }
 
 .pacMan {
+    fill: #029be5;
     background-image: url("../images/logo1.svg");
     background-position: 50% 50%;
     background-size: contain;
