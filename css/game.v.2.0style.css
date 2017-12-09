@@ -2,11 +2,14 @@
 
 body {
     background-color: #029be5;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
     text-align: center;
-    color: #e8e9ea;
+    color: white;
+    font-family: 'Nunito', sans-serif;
 }
 
 .container {
@@ -18,13 +21,15 @@ h1 {
 }
 
 .game-screen {
-    background-color: #63ccff
+    background-color: #63ccff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*start screen*/
 
 .start-screen {
-    ;
 }
 
 .pacman-pic img {
@@ -34,16 +39,14 @@ h1 {
 /*play screen*/
 .play-screen {
     display: none;
-    align-items: center;
-    justify-content: center;
 }
 
 .table {
     display: flex;
     min-height: 320px;
     min-width: 320px;
-    width: 500px;
-    height: 500px;
+    /*width: 500px;*/
+    /*height: 500px;*/
     align-items: stretch;
     flex-direction: column;
     border: 0 solid transparent;
@@ -61,23 +64,17 @@ h1 {
 }
 
 .dots {
-    /*background-color: #B71C1C;*/
     background-image: url("../images/icons/hamburger.png");
     background-position: 50% 50%;
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .pacMan {
-    background-image: url("../images/icons/cutlery (1).png");
+    background-image: url("../images/logo1.svg");
     background-position: 50% 50%;
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
-}
-
-.burger {
-
-    /*background: #0c0;*/
 }
 
 .wall {
