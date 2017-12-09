@@ -195,7 +195,7 @@
         </div>
 
     </section>
-    <div id="sign-in"></div>
+
 </div>
 
 <!--sign in % stopka-->
@@ -258,16 +258,16 @@
         $(document).scroll(function () {
             scroll_start = $(this).scrollTop();
             if (scroll_start > offset.top) {
-                $('.nav-cont').css('background-color', '#222e41');
+                $('.header-ctnr').css('background-color', '#222e41');
             } else {
-                $('.nav-cont').css('background-color', 'transparent');
+                $('.header-ctnr').css('background-color', 'transparent');
             }
         });
     });
 </script>
 <script>
     jQuery(document).ready(function (jQuery) {
-        var topMenu = jQuery(".nav-wrap"),
+        var topMenu = jQuery(".header"),
             offset = 40,
             topMenuHeight = topMenu.outerHeight() + offset,
             // All list items
