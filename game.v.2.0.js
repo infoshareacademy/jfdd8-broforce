@@ -126,7 +126,8 @@ $(document).ready(function () {
 
     function play() {
         $(window).on('keyup', function (event) {
-            // console.log(event.keyCode);
+            // console.log(event.keyCode, event.key);
+
             switch (event.keyCode) {
                 case 39:
                     movePacManRight();
