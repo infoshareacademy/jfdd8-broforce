@@ -1,5 +1,21 @@
 $(document).ready(function () {
-    var size = 10;
+    var size = 11;
+    var walls = [
+        '             ',
+        ' ## ## ## ## ',
+        ' #         # ',
+        '   ## # ##   ',
+        ' #    #    # ',
+        ' # ## # ## # ',
+        '   #     #   ',
+        ' #   ###   # ',
+        ' # #     # # ',
+        '   ## # ##   ',
+        ' #         # ',
+        ' ## ## ## ## ',
+        '             '
+    ];
+
     var gameIntervalId;
     var eggsIntervalId;
     var $app = $('#app');
@@ -7,7 +23,7 @@ $(document).ready(function () {
     $app.append($board);
 
     var $pacManPosition = $('.table > div:last > div').eq(4);
-    createBasket($pacManPosition);
+    createPacMan($pacManPosition);
 
     play();
 
@@ -15,11 +31,12 @@ $(document).ready(function () {
         return Array.from({ length: size })
     }
 
+
     function createBoard() {
         return $('<div>').addClass('table').append(
-            range(size).map(function () {
-                return $('<div>').append(range(size).map(function () {
-                    return $('<div>')
+            walls.map(function (wall) {
+                return $('<div>').append(wall.split('').map(function (segment) {
+                    return $('<div>').addClass(segment === '#' ? 'wall' : null)
                 }))
             })
         );
@@ -31,8 +48,8 @@ $(document).ready(function () {
     //     )
     // }
 
-    function createBasket($node) {
-        $node.addClass('basket')
+    function createPacMan($node) {
+        $node.addClass('pacMan')
     }
 
     // function createEgg($node) {
@@ -51,21 +68,55 @@ $(document).ready(function () {
         })
     }
 
+
     function movePacManRight() {
-        $('.pacMan').removeClass('pacMan').next().addClass('pacMan');
+        var $currentNode = $('.pacMan');
+        var $targetNode = $currentNode.next();
+
+        if ($targetNode.length === 0 || $targetNode.hasClass('wall')) {
+            // skip
+        } else {
+            $currentNode.removeClass('pacMan');
+            $targetNode.addClass('pacMan');
+        }
     }
 
     function movePacManLeft() {
-        $('.pacMan').removeClass('pacMan').prev().addClass('pacMan');
+        var $currentNode = $('.pacMan');
+        var $targetNode = $currentNode.prev();
+
+        if ($targetNode.length === 0 || $targetNode.hasClass('wall')) {
+            // skip
+        } else {
+            $currentNode.removeClass('pacMan');
+            $targetNode.addClass('pacMan');
+        }
     }
 
     function movePacManUp() {
-        $('.pacMan').removeClass('pacMan').parent().prev().find('div').eq($(this).index()).addClass('pacMan');
+        var $currentNode = $('.pacMan');
+        var $targetNode = $($currentNode.parent().prev().children()[$currentNode.index()]);
+
+        if ($targetNode.length === 0 || $targetNode.hasClass('wall')) {
+            // skip
+        } else {
+            $currentNode.removeClass('pacMan');
+            $targetNode.addClass('pacMan');
+        }
     }
 
     function movePacManDown() {
-        $('.pacMan').removeClass('pacMan').parent().next().find('div') .eq($(this).index()).addClass('pacMan');
+        var $currentNode = $('.pacMan');
+        var $targetNode = $($currentNode.parent().next().children()[$currentNode.index()]);
+
+        if ($targetNode.length === 0 || $targetNode.hasClass('wall')) {
+            // skip
+        } else {
+            $currentNode.removeClass('pacMan');
+            $targetNode.addClass('pacMan');
+        }
     }
+
 
     function detectCatch() {
         if ($('.pacMan.egg').length > 0) {
@@ -75,7 +126,8 @@ $(document).ready(function () {
 
     function play() {
         $(window).on('keyup', function (event) {
-            // console.log(event.keyCode);
+            // console.log(event.keyCode, event.key);
+
             switch (event.keyCode) {
                 case 39:
                     movePacManRight();
@@ -94,16 +146,17 @@ $(document).ready(function () {
                     break;
             }
             detectCatch()
-        });
+        })
+    }
 
         gameIntervalId = setInterval(function () {
             moveEggs();
             detectCatch();
-        }, 300);
+        }, 300)
 
         // eggsIntervalId = setInterval(function () {
         //     var $eggPosition = drawEggStartingPosition();
         //     createEgg($eggPosition);
         // }, 500);
-    }
-})
+
+});

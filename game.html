@@ -5,7 +5,6 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/game-page.css" type="text/css">
     <link rel="stylesheet" href="css/game.v.2.0style.css" type="text/css">
 
     <title>Szamello Monster</title>
@@ -21,7 +20,7 @@
 
     <div class="game-screen start-screen">
         <div>
-            <img src="images/logo1.svg" alt="Szamello logo">
+            <a href="http://broforce.jfdd8.is-academy.pl"></a><img src="images/logo1.svg" alt="Szamello logo">
         </div>
         <div class="pacman-pic">
             <img  src="images/pacman.png" alt="Pacman">
@@ -34,10 +33,17 @@
         </div>
 
     </div>
-
-    <div class="game-screen play-screen" id="app">
+<div class="game-screen play-screen">
+    <div id="app">
 
     </div>
+    <div class="button">
+        <button id="finish-button" type="button">Go eat</button>
+    </div>
+
+    </div>
+
+
 
     <div class="game-screen end-screen">
         <div class="high-scores">
@@ -55,6 +61,15 @@
             </ol>
         </div>
 
+        <div class="button">
+            <button id="restart-button" type="button">restart</button>
+        </div>
+        <div class="button">
+            <button id="home-button" type="button">Home</button>
+        </div>
+        <div class="button">
+            <a href="http://broforce.jfdd8.is-academy.pl" target="_blank"><button id="link-button" type="button">Check our beautiful website</button></a>
+        </div>
     </div>
 </div>
 
@@ -62,153 +77,30 @@
 <script src="game.v.2.0.js"></script>
 <script>
 
-    //przekierowanie do high-score ze start-screen
+    //start to end screen
 
-    $('#high-scores').click(function(){
+    $('#high-scores, #finish-button').click(function(){
         $('.start-screen, .play-screen').hide();
+        $('.end-screen').show();
     });
 
-    // przekierowanie do play-screen ze start screen
+    // start/end screen to play-screen
 
     $('#start-button').click(function(){
         $('.start-screen, .end-screen').hide();
+        $('.play-screen').show();
     });
-//
-//    // game play-board
-//
-//    var sizeX = 20,
-//        sizeY = 20,
-//        directionX = 1,
-//        directionY = 0;
-//
-//    // create pacMan
-//    var pacMan = [{
-//        x: 3,
-//        y: 3,
-//        className: 'pacMan'
-//    }];
-//
-//    // create burger
-//    var burger = [{
-//        x: 1,
-//        y: 1,
-//        className: 'burger'
-//    }];
-//
-//    function boardMaker(tagName) {
-//        return document.createElement(tagName)
-//    }
-//
-//    function createBoard(cells, sizeX, sizeY, target) {
-//
-//        var board = boardMaker('section');
-//        var rangeX = Array.from({ length: sizeX});
-//        var rangeY = Array.from({ length: sizeY});
-//
-//        board.classList.add('table');
-//        rangeY.forEach(function (_, y) {
-//            var createRow = boardMaker('div');
-//            rangeX.forEach(function (_, x) {
-//                var createColumn = boardMaker('div');
-//
-//                cells.forEach(function (cell) {
-//                    if (y === cell.y && x === cell.x){
-//
-//                        var createPacMan = boardMaker('div');
-//                        $(createColumn).append(createPacMan);
-//                        $(createPacMan).addClass(cell.className);
-//
-//                        var createBurger = boardMaker('div');
-//                        $(createColumn).append(createBurger);
-//                        $(createBurger).addClass(cell.className)
-//                    }
-//                });
-//                createRow.appendChild(createColumn)
-//            });
-//            board.appendChild(createRow)
-//        });
-//        return board
-//    }
-//
-//    function showElement(parentId, element) {
-//        document.getElementById(parentId).innerHTML = "";
-//        document.getElementById(parentId).appendChild(element);
-//    }
-//    $('section.table div > div')
-//        .addClass('basicCell');
-//
-//    // play-board applied to html + pacMan moves
-//
-//    setInterval(function(){
-//
-//        var board = createBoard(pacMan, sizeX, sizeY);
-//        $('div.play-screen').html(board);
-//
-//        var pacHead = {
-//            x: pacMan[0].x,
-//            y: pacMan[0].y,
-//            className: pacMan[0].className
-//        };
-//        var newPacHead = {
-//            x: (pacHead.x + directionX + sizeX) % sizeX,
-//            y: (pacHead.y + directionY + sizeY) % sizeY,
-//            className: pacHead.className
-//        };
-//
-//        pacMan.unshift(newPacHead);
-//        pacMan.pop();
-//
-//    }, 100);
-//
-//    setInterval(function(){
-//
-//    var burgerHead = {
-//        x: burger[0].x,
-//        y: burger[0].y,
-//        className: burger[0].className
-//    };
-//    var newBurgerHead = {
-//        x: (burgerHead.x + directionX + sizeX) % sizeX,
-//        y: (burgerHead.y + directionY + sizeY) % sizeY,
-//        className: burgerHead.className
-//    };
-//
-//    burger.unshift(newBurgerHead);
-//    burger.pop();
-//
-//    }, 50);
-//
-//    // navigation
-//    window.addEventListener('keydown', function(event){
-//
-//        if (event.key === 'ArrowRight') {
-//            directionX = 1;
-//            directionY = 0;
-//        }
-//        if (event.key === 'ArrowLeft') {
-//            directionX = -1;
-//            directionY = 0;
-//        }
-//        if (event.key === 'ArrowUp') {
-//            event.preventDefault();
-//            directionY = -1;
-//            directionX = 0;
-//        }
-//        if (event.key === 'ArrowDown') {
-//            event.preventDefault();
-//            directionY = 1;
-//            directionX = 0;
-//        }
-//    });
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
+    $('#restart-button').click(function () {
+        $('.start-screen, .end-screen').hide();
+        $('.play-screen').show();
+    })
+
+    $('#home-button').click(function () {
+        $('.play-screen, .end-screen').hide();
+        $('.start-screen').show();
+    })
+
 
 </script>
 </body>
