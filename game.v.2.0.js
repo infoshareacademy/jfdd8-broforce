@@ -125,8 +125,13 @@ $(document).ready(function () {
 
 
     function detectCatch() {
-        if ($('.pacMan.egg').length > 0) {
-            console.log('CATCHED!')
+        var $consumptionNode = $('div.pacMan.dots');
+        if ($consumptionNode.length === 1) {
+            $consumptionNode.removeClass('dots');
+        };
+
+        if ($('.pacMan.dots').length > 0) {
+            $('.pacMan.dots').removeClass('dots')
         }
     }
 
@@ -153,10 +158,7 @@ $(document).ready(function () {
             }
             detectCatch()
         })
-        var $consumptionNode = $('div.pacMan.dots');
-        if ($consumptionNode.length === 1) {
-            $consumptionNode.removeClass('dots');
-        };
+
 
         $(window).on('keydown', function (event) {
             event.preventDefault(); })
