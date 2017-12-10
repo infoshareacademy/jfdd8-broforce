@@ -8,19 +8,16 @@
           rel="stylesheet">
     <script src="js/jquery-1.8.3.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 </head>
 <body>
 <div class="top-background" id="top">
     <!-- navigation -->
     <div class="header-ctnr">
         <header class="header">
-            <a href="" class="logo"><img src="images/logo1.svg" alt="Szamello!" style="height: 40px;"></a>
+            <a href="#top" class="logo"><img src="images/logo1.svg" alt="Szamello!" style="height: 40px;"></a>
             <input class="menu-btn" type="checkbox" id="menu-btn" />
             <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-            <ul class="menu">
+            <ul class="menu" id="top-menu">
                 <li><a href="#desc">Aplikacja</a></li>
                 <li><a href="#product-func">Funkcje</a></li>
                 <li><a href="#team">Zespół</a></li>
@@ -110,34 +107,39 @@
 <!--- Testimonials -->
 
 <div class="testimonial-container ">
-    <div class="mySlides slides slide-active">
-        <div class="client-block"><p><q>Super pomysł, przetestowałem wersje beta i jest naprade fajna - polecam !</q></p>
-            <h4>Piotr Nowak</h4>
-            <h5>menager </h5>
+    <section class="testimonials center">
+        <div class="mySlides slides slide-active">
+            <div class="client-block">
+                <img src="images/quote.png" alt="quote">
+                <p>Super pomysł, przetestowałem wersje beta i jest naprade fajna - polecam !</p>
+                <h4>Piotr Nowak</h4>
+                <h5>menager </h5>
+            </div>
         </div>
-    </div>
         <div class="mySlides slides">
-            <div class="client-block"><p><q> Brakowało nam tej aplikacji w pracy, teraz wszystko jest jasne i przeźroczyste</q></p>
+            <div class="client-block">
+                <p>Brakowało nam tej aplikacji w pracy, teraz codzienne zamawianie posiłków jest jeszcze prostsze!</p>
                 <h4>Agnieszka Dudzik</h4>
                 <h5>menager </h5>
             </div>
         </div>
-    <div class="mySlides slides">
-        <div class="client-block"><p><q>Teraz możemy zamawiac obiady i niema problemów z rozliczaniem.Super pomysł!</q></p>
-            <h4>Michał Wójcik </h4>
-            <h5>Architekt </h5>
+        <div class="mySlides slides">
+            <div class="client-block">
+                <p>Teraz możemy zamawiac obiady i nie ma problemów z rozliczaniem. Super pomysł!</p>
+                <h4>Michał Wójcik </h4>
+                <h5>Architekt </h5>
+            </div>
         </div>
-    </div>
-    <div class="radio-button">
-        <!--<div class="arrow" onclick="plusDivs(-1)">&#10094;</div>-->
-        <div class="balls">
-            <span class="slide-control slide-control-active"></span>
-            <span class="slide-control"></span>
-            <span class="slide-control"></span>
-        </div>
-        <!--<div class="arrow" onclick="plusDivs(1)">&#10095;</div>-->
-    </div>
 
+        <!--<div class="arrow" onclick="plusDivs(-1)">&#10094;</div>-->
+            <div class="balls">
+                <span class="slide-control slide-control-active"></span>
+                <span class="slide-control slide-control-middle"></span>
+                <span class="slide-control"></span>
+            </div>
+        <!--<div class="arrow" onclick="plusDivs(1)">&#10095;</div>-->
+
+    </section>
 
 </div>
 
@@ -267,7 +269,7 @@
 </script>
 <script>
     jQuery(document).ready(function (jQuery) {
-        var topMenu = jQuery(".header"),
+        var topMenu = jQuery("#top-menu"),
             offset = 40,
             topMenuHeight = topMenu.outerHeight() + offset,
             // All list items
