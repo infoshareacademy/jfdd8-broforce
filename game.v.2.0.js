@@ -27,9 +27,7 @@ $(document).ready(function () {
 
 
     $('#start-button').click(play);
-
-    // play();
-
+    $('#restart-button').createBoard().click(play);
 
     function range(size) {
         return Array.from({length: size})
@@ -145,7 +143,7 @@ $(document).ready(function () {
     function play() {
         score = 0;
         updateScore(0);
-        $(window).on('keydown', function (event) {
+        $(window).on('keyup', function (event) {
             // console.log(event.keyCode, event.key);
 
             switch (event.keyCode) {
@@ -196,6 +194,7 @@ $(document).ready(function () {
         }, 1000);
 
     }
+
 
     window.onload = function () {
         var fiveMinutes = 60 * 0.1,
