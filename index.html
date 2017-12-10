@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Szamello - Zamawiaj szamę z kolegami z pracy!</title>
     <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900|Roboto:300,400,500,700,900&amp;subset=latin-ext"
-          rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700,900|Roboto:300,400,500,700,900&amp;subset=latin-ext" rel="stylesheet">
     <script src="js/jquery-1.8.3.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -118,6 +118,7 @@
         </div>
         <div class="mySlides slides">
             <div class="client-block">
+                <img src="images/quote.png" alt="quote">
                 <p>Brakowało nam tej aplikacji w pracy, teraz codzienne zamawianie posiłków jest jeszcze prostsze!</p>
                 <h4>Agnieszka Dudzik</h4>
                 <h5>menager </h5>
@@ -125,6 +126,7 @@
         </div>
         <div class="mySlides slides">
             <div class="client-block">
+                <img src="images/quote.png" alt="quote">
                 <p>Teraz możemy zamawiac obiady i nie ma problemów z rozliczaniem. Super pomysł!</p>
                 <h4>Michał Wójcik </h4>
                 <h5>Architekt </h5>
@@ -183,7 +185,7 @@
         </div>
 
         <div class="team-member-cont">
-            <img class="profile_photo" src="images/teammember.png" alt="typo">
+            <img class="profile_photo" src="images/janusz-fota-cv.jpg" alt="typo">
             <p class="team-member-name">Yanush Petraha</p>
             <div class="social_container">
                 <a class="social_link" href="https://github.com/JanuszPietraga" target="_blank">
@@ -197,11 +199,11 @@
         </div>
 
     </section>
-
+    <div id="sign-in"></div>
 </div>
 
 <!--sign in % stopka-->
-<div class="bottom-out-ctnr" id="sign-in">
+<div class="bottom-out-ctnr">
     <section class="bottom center">
 
         <div class="sign-in-desc">
@@ -209,37 +211,17 @@
             <h3>Zapisz się i otrzymaj wcześniejszy dostęp do aplikacji</h3>
 
             <form action="https://formspree.io/szamello.office@gmail.com" method="POST">
-                <input name="email" type="email" placeholder="Twój e-mail" required/>
-                <input type="hidden" name="_next"
-                       value="http://localhost:63342/jfdd8-broforce/game.html"/>
-
-                <button>Wyślij</button>
+                <input id="email-field" name="email" type="email" placeholder="Twój e-mail" required/>
+                <input type="hidden" name="_next" value="http://localhost:63342/jfdd8-broforce/game.html"/>
             </form>
+            <button>Wyślij</button>
         </div>
 
 
-        <div class="contact">
-            <div class="contact-col">
-                <h3>Aktualności</h3>
-                <ul>
-                    <li><a href="blog.html"><b>10.12.2017</b> | Otwarta Beta</a></li>
-                    <li><a href="blog.html"><b>05.11.2017</b> | Zmiany w zespole</a></li>
-                    <li><a href="blog.html"><b>15.10.2017</b> | Funkcje Szamello</a></li>
-                    <li><a href="blog.html"><b>01.10.2017</b> | Nowy UI Szamello</a></li>
-
-                </ul>
-            </div>
-            <div class="contact-col">
-
-            </div>
-            <div class="contact-col" style="border-right: none;">
-                <h3>Kontakt</h3>
-                <p>ul. Przykładowa 40<br/>80-800 Gdańsk</p>
-
-                <p>555 700 700</p>
-                <a href="mailto: info@szamello.pl">info@szamello.pl</a>
-            </div>
+        <div>
+            <img src="images/szamello.png" alt="szamello" id="szamello">
         </div>
+
         <div class="footer">
             <div class="copyrights">
                 <p>Wszystkie prawa zastrzeżone <span>Szamello &reg;</span> 2017</p>
@@ -260,9 +242,9 @@
         $(document).scroll(function () {
             scroll_start = $(this).scrollTop();
             if (scroll_start > offset.top) {
-                $('.header-ctnr').css('background-color', '#222e41');
+                $('.header-ctnr').css('background-color', '#05b2f7');
             } else {
-                $('.header-ctnr').css('background-color', 'transparent');
+                $('.header-ctnr').css('background-color', '#05b2f7');
             }
         });
     });

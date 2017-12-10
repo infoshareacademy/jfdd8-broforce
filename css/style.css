@@ -19,11 +19,16 @@ h1, h2, h3, h4, h5, p, li, a {
 }
 
 /* header */
-#top-menu li.active a {
+.menu-back {
+    background: #05b2f7;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+.header li.active a {
     background: white;
     color: #05b2f7;
     border-radius: 50px;
-    padding: 10px 20px;
 }
 .header-ctnr {
     position: fixed;
@@ -33,6 +38,10 @@ h1, h2, h3, h4, h5, p, li, a {
 .header {
     width: 63%;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
 }
 
 .header ul {
@@ -54,7 +63,6 @@ h1, h2, h3, h4, h5, p, li, a {
     background: white;
     color: #05b2f7;
     border-radius: 50px;
-    padding: 10px 20px;
 }
 
 .header .logo {
@@ -142,12 +150,11 @@ h1, h2, h3, h4, h5, p, li, a {
 /* 48em = 768px */
 
 @media (min-width: 925px) {
+
     .header li {
         float: left;
     }
-    .header li a {
-        padding: 20px 30px;
-    }
+
     .header .menu {
         clear: none;
         float: right;
@@ -159,6 +166,10 @@ h1, h2, h3, h4, h5, p, li, a {
 }
 
 @media (max-width: 924px) {
+
+    .header-ctnr {
+        background: #05b2f7;
+    }
     .header li {
         text-align: center;
     }
@@ -267,11 +278,8 @@ h1, h2, h3, h4, h5, p, li, a {
     }
 }
 
-@media screen and (min-width: 801px) and (max-width: 901px) {
-
-    .desc-desc {
-        margin-top: 50px;
-    }
+}
+@media screen and (min-width: 801px) and (max-width: 924px) {
 
     #check-it-out {
         margin-top: 0;
@@ -283,6 +291,7 @@ h1, h2, h3, h4, h5, p, li, a {
 
     .desc-desc {
         width: 50%;
+        margin-top: 120px;
     }
 
     .desc-inn-cont img {
@@ -320,7 +329,7 @@ h1, h2, h3, h4, h5, p, li, a {
 
     .desc-inn-cont {
         display: block;
-        padding-top: 300px;
+        padding-top: 200px;
         width: 63%;
     }
 
@@ -542,7 +551,6 @@ h1, h2, h3, h4, h5, p, li, a {
 .team-inn-cont {
     display: flex;
     justify-content: space-between;
-    width: 63%;
 }
 
 .team-out-cont {
@@ -659,21 +667,19 @@ a.social_link {
     background: url("../images/bottom-back.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    height: 700px;
 }
 .bottom {
     padding-bottom: 20px;
 }
 .sign-in-desc {
-    width: 100%;
     text-align: center;
     background: #05b2f7;
     box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.3);
     width: 60%;
     padding: 70px 50px;
-    margin: 200px auto 0;
+    margin: 200px auto 50px;
     position: relative;
-    top: -70px;
+    top: -50px;
 }
 .sign-in-desc h2 {
     margin: 0;
@@ -695,9 +701,10 @@ a.social_link {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 .bottom input {
-    width: 300px;
+    width:75%;
     border-radius: 5px;
     border: 2px solid #302f3d;
     background: transparent;
@@ -706,9 +713,10 @@ a.social_link {
     padding: 15px;
     margin-top: 20px;
     color: white;
+
 }
 .bottom button {
-    width: 330px;
+    width: 80%;
     border-radius: 5px;
     border: none;
     padding: 15px;
@@ -728,35 +736,14 @@ a.social_link {
     background: white;
     color: #05b2f7;
 }
-.contact {
+
+#szamello {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    color: white;
-}
-.contact a {
-    color: white;
-    text-decoration: none;
-}
-.contact a:hover, a:active {
-    color: #05b2f7;
-}
-.contact ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.contact li {
-    padding-bottom: 10px;
-}
-.contact-col {
-    width: 30%;
-    border-right: 1px solid white;
 }
 .footer {
     width: 100%;
     display: flex;
-    padding-top: 30px;
+    padding-top: 120px;
     color: #9696a1;
 }
 .copyrights {
