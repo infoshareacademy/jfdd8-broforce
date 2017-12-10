@@ -10,6 +10,15 @@ h1, h2, ol, #score, #time {
     font-family: 'Nunito', sans-serif;
 }
 
+#score, #time {
+    display: inline-block;
+    font-size: 2rem;
+    border: 2px solid #029be5;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
 .container {
     min-height: 320px;
     min-width: 320px;
@@ -74,7 +83,8 @@ h1, h2, ol, #score, #time {
     /*height: 500px;*/
     align-items: stretch;
     flex-direction: column;
-    border: 0 solid transparent;
+    border: 2px solid #029be5;
+    border-radius: 5px;
 }
 
 .table > div {
