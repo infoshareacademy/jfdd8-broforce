@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/game.v.2.0style.css" type="text/css">
+
+    <title>Szamello Monster</title>
+</head>
+<body>
+<header>
+    <h1>
+        Dziękujemy za wysłanie maila! Pograj sobie :)
+    </h1>
+</header>
+
+<div class="container">
+
+    <div class="game-screen start-screen">
+        <div>
+            <a href="http://broforce.jfdd8.is-academy.pl"></a><img src="images/logo1.svg" alt="Szamello logo">
+        </div>
+        <div class="pacman-pic">
+            <img  src="images/pacman.png" alt="Pacman">
+        </div>
+
+
+        <div class="button">
+            <button id="start-button" type="button">start</button>
+            <button id="high-scores" type="button">high-scores</button>
+        </div>
+
+    </div>
+<div class="game-screen play-screen">
+    <div id="app">
+
+    </div>
+    <div class="button">
+        <button id="finish-button" type="button">Go eat</button>
+    </div>
+
+    </div>
+
+
+
+    <div class="game-screen end-screen">
+        <div class="high-scores">
+            <ol class="high-score-list">
+                <p>High-scores</p>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+
+        <div class="button">
+            <button id="restart-button" type="button">restart</button>
+        </div>
+        <div class="button">
+            <button id="home-button" type="button">Home</button>
+        </div>
+        <div class="button">
+            <a href="http://broforce.jfdd8.is-academy.pl" target="_blank"><button id="link-button" type="button">Check our beautiful website</button></a>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="game.v.2.0.js"></script>
+<script>
+
+    //start to end screen
+
+    $('#high-scores, #finish-button').click(function(){
+        $('.start-screen, .play-screen').hide();
+        $('.end-screen').show();
+    });
+
+    // start/end screen to play-screen
+
+    $('#start-button').click(function(){
+        $('.start-screen, .end-screen').hide();
+        $('.play-screen').show();
+    });
+
+    $('#restart-button').click(function () {
+        $('.start-screen, .end-screen').hide();
+        $('.play-screen').show();
+    })
+
+    $('#home-button').click(function () {
+        $('.play-screen, .end-screen').hide();
+        $('.start-screen').show();
+    })
+
+
+</script>
+</body>
+</html>
