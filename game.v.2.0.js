@@ -145,7 +145,7 @@ $(document).ready(function () {
     function play() {
         score = 0;
         updateScore(0);
-        $(window).on('keyup', function (event) {
+        $(window).on('keydown', function (event) {
             // console.log(event.keyCode, event.key);
 
             switch (event.keyCode) {
@@ -178,7 +178,30 @@ $(document).ready(function () {
         detectCatch();
     }, 300)
 
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        var interval = setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
 
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+            if (--timer < 0) {
+                timer = duration;
+            }
+
+
+        }, 1000);
+
+    }
+
+    window.onload = function () {
+        var fiveMinutes = 60 * 0.1,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
+    };
 
     // eggsIntervalId = setInterval(function () {
     //     var $eggPosition = drawEggStartingPosition();
