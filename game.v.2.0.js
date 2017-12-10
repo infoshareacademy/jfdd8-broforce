@@ -27,7 +27,7 @@ $(document).ready(function () {
 
 
     $('#start-button').click(play);
-    $('#restart-button').createBoard().click(play);
+    $('#restart-button').click(play);
 
     function range(size) {
         return Array.from({length: size})
@@ -141,6 +141,7 @@ $(document).ready(function () {
     }
 
     function play() {
+        $(window).off('keydown keyup');
         score = 0;
         updateScore(0);
         $(window).on('keyup', function (event) {
@@ -188,8 +189,12 @@ $(document).ready(function () {
             display.textContent = minutes + ":" + seconds;
             if (--timer < 0) {
                 timer = duration;
+                clearInterval(interval);
+                $('.start-screen, .play-screen').hide();
+                $('.end-screen').show().css('display', 'flex');
+                $('header h1').html('Fajna gra? Spróbuj jeszcze raz!');
+                $('div.thanks').append('Super! Twój wynik to ' + $(updateScore()));
             }
-
 
         }, 1000);
 
@@ -202,9 +207,6 @@ $(document).ready(function () {
         startTimer(fiveMinutes, display);
     };
 
-    // eggsIntervalId = setInterval(function () {
-    //     var $eggPosition = drawEggStartingPosition();
-    //     createEgg($eggPosition);
-    // }, 500);
+
 
 });

@@ -12,7 +12,7 @@
 <body>
 <header>
     <h1>
-        Dziękujemy za suba! Zagraj w grę ;)
+        Dzięki za suba! Zagraj. Zasłużyłeś.
     </h1>
 </header>
 
@@ -22,14 +22,9 @@
         <div>
             <a href="http://broforce.jfdd8.is-academy.pl" target="_blank"><img src="images/logo1.svg" alt="Szamello logo"></a>
         </div>
-        <div class="pacman-pic">
-            <img  src="images/pacman.png" alt="Pacman">
-        </div>
-
 
         <div class="button">
-            <button id="start-button" type="button">start</button>
-            <button id="high-scores" type="button">high-scores</button>
+            <button class='btn blue' id="start-button" type="button">Start</button>
         </div>
 
     </div>
@@ -40,7 +35,7 @@
 
     </div>
     <div class="button">
-        <button id="finish-button" type="button">Go eat</button>
+        <button class='btn blue' id="finish-button" type="button">Idę zjeść</button>
     </div>
 
     </div>
@@ -48,29 +43,18 @@
 
 
     <div class="game-screen end-screen">
-        <div class="high-scores">
-            <ol class="high-score-list">
-                <h2>High-scores</h2>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
+        <div class="thanks">
+
         </div>
 
         <div class="button">
-            <button id="restart-button" type="button">restart</button>
+            <button class='btn blue' id="restart-button" type="button">Restart</button>
         </div>
         <div class="button">
-            <button id="home-button" type="button">Home</button>
+            <button class='btn blue' id="home-button" type="button">Home</button>
         </div>
         <div class="button">
-            <a href="http://broforce.jfdd8.is-academy.pl" target="_blank"><button id="link-button" type="button">Check our beautiful website</button></a>
+            <a href="http://broforce.jfdd8.is-academy.pl" target="_blank"><button class='btn blue' id="link-button" type="button">Szamello.pl</button></a>
         </div>
     </div>
 <!--</div>-->
@@ -103,7 +87,6 @@
         $('.start-screen').show().css('display', 'flex');
     });
 
-    $('.burger').addClass('icono-smile');
 
 
 </script>
