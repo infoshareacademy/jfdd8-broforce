@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, p, li, a {
     position: fixed;
     width: 100%;
     z-index: 3;
+    background: #05b2f7;
 }
 .header {
     width: 63%;
@@ -278,7 +279,6 @@ h1, h2, h3, h4, h5, p, li, a {
     }
 }
 
-}
 @media screen and (min-width: 801px) and (max-width: 924px) {
 
     #check-it-out {
