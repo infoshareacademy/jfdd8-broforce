@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var size = 11;
+
     var walls = [
         '             ',
         ' ## ## ## ## ',
@@ -15,20 +15,22 @@ $(document).ready(function () {
         ' ## ## ## ## ',
         '             '
     ];
-
+    var score = 0;
     var gameIntervalId;
     var eggsIntervalId;
     var $app = $('#app');
     var $board = createBoard();
     $app.append($board);
 
-    var $pacManPosition = $('.table > div:last > div').eq(4);
+    var $pacManPosition = $('.table > div:nth-child(7) > div').eq(6);
     createPacMan($pacManPosition);
 
-    play();
+
+    $('#start-button').click(play);
+    $('#restart-button').click(play);
 
     function range(size) {
-        return Array.from({ length: size })
+        return Array.from({length: size})
     }
 
 
@@ -36,7 +38,7 @@ $(document).ready(function () {
         return $('<div>').addClass('table').append(
             walls.map(function (wall) {
                 return $('<div>').append(wall.split('').map(function (segment) {
-                    return $('<div>').addClass(segment === '#' ? 'wall' : null)
+                    return $('<div>').addClass(segment === '#' ? 'wall' : 'dots')
                 }))
             })
         );
@@ -51,6 +53,7 @@ $(document).ready(function () {
     function createPacMan($node) {
         $node.addClass('pacMan')
     }
+
 
     // function createEgg($node) {
     //     $node.addClass('egg')
@@ -119,12 +122,28 @@ $(document).ready(function () {
 
 
     function detectCatch() {
-        if ($('.pacMan.egg').length > 0) {
-            console.log('CATCHED!')
+        var $consumptionNode = $('div.pacMan.dots');
+        if ($consumptionNode.length === 1) {
+            $consumptionNode.removeClass('dots');
+            updateScore(1);
+        }
+        ;
+
+        if ($('.pacMan.dots').length > 0) {
+            $('.pacMan.dots').removeClass('dots');
+
         }
     }
 
+    function updateScore(delta) {
+        score += delta;
+        $('#score').text(score);
+    }
+
     function play() {
+        $(window).off('keydown keyup');
+        score = 0;
+        updateScore(0);
         $(window).on('keyup', function (event) {
             // console.log(event.keyCode, event.key);
 
@@ -145,18 +164,49 @@ $(document).ready(function () {
                     movePacManDown();
                     break;
             }
-            detectCatch()
+            detectCatch();
+        });
+
+        $(window).on('keydown', function (event) {
+            event.preventDefault();
         })
     }
 
-        gameIntervalId = setInterval(function () {
-            moveEggs();
-            detectCatch();
-        }, 300)
+    gameIntervalId = setInterval(function () {
+        // moveEggs();
+        detectCatch();
+    }, 300)
 
-        // eggsIntervalId = setInterval(function () {
-        //     var $eggPosition = drawEggStartingPosition();
-        //     createEgg($eggPosition);
-        // }, 500);
+    function startTimer(duration, display) {
+        var timer = duration, minutes, seconds;
+        var interval = setInterval(function () {
+            minutes = parseInt(timer / 60, 10)
+            seconds = parseInt(timer % 60, 10);
+
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = minutes + ":" + seconds;
+            if (--timer < 0) {
+                timer = duration;
+                clearInterval(interval);
+                $('.start-screen, .play-screen').hide();
+                $('.end-screen').show().css('display', 'flex');
+                $('header h1').html('Fajna gra? Spróbuj jeszcze raz!');
+                $('div.thanks').append('Super! Twój wynik to ' + $(score)).addClass('btn blue');
+             }
+
+        }, 1000);
+
+    }
+
+
+    window.onload = function () {
+        var fiveMinutes = 60 * 0.5,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
+    };
+
+
 
 });

@@ -1,55 +1,91 @@
 body {
-    background-color: #302f3d;
-}
-
-h1 {
-    text-align: center;
-    color: #e8e9ea;
-}
-.container {
+    background-color: #029be5;
     display: flex;
     flex-direction: column;
-    align-items: center;
+}
+
+h1, h2, ol, #score, #time {
+    text-align: center;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+
+#score, #time {
+    display: inline-block;
+    font-size: 2rem;
+    border: 2px solid #029be5;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.container {
+    min-height: 320px;
+    min-width: 320px;
+    width: 80vh;
+    height: 80vh;
+    margin: auto;
 }
 
 .game-screen {
-    width: 80vw;
-    height: 80vw;
-    min-height: 360px;
-    min-height: 360px;
+    background-color: #63ccff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+}
+
+.btn {
+    font-family: Nunito, sans-serif;
+    background-color: white;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 22px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    cursor: url(http://cur.cursors-4u.net/symbols/sym-1/sym46.cur), auto;
+}
+
+.blue {
+    color: #029be5;
+    border: 2px white solid;
 }
 
 /*start screen*/
 
 .start-screen {
-    background-color: green;
 }
 
 .pacman-pic img {
     width: 50px;
 }
 
-
 /*play screen*/
 .play-screen {
     display: none;
-    background-color: #05b2f7;
-    align-items: center;
-    justify-content: center;
 }
 
 .table {
     display: flex;
-    min-height: 360px;
-    min-height: 360px;
+    min-height: 320px;
+    min-width: 320px;
     /*width: 500px;*/
     /*height: 500px;*/
     align-items: stretch;
     flex-direction: column;
-    border: 1px solid black;
+    border: 2px solid #029be5;
+    border-radius: 5px;
 }
-
-
 
 .table > div {
     display: flex;
@@ -62,23 +98,27 @@ h1 {
     border: 0 solid transparent;
 }
 
-.pacMan {
-    background: yellow;
-    border-radius: 100%;
+.dots {
+    background-image: url("../images/icons/hamburger.png");
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.burger {
-    background: #0c0;
+.pacMan {
+    fill: #029be5;
+    background-image: url("../images/logo1.svg");
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .wall {
-    background: black;
+    background-color: #029be5;
 }
-
 
 /*end-screen*/
 
 .end-screen {
     display: none;
-    background-color: aquamarine;
 }
