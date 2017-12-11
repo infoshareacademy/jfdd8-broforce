@@ -13,17 +13,26 @@
         }
 
         a {
-            color: #000;
+            color: white;
         }
 
         /* header */
-
+.active {
+background: green;
+    color: white;
+}
         .header {
             background-color: #fff;
             box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+        .header-ctnr {
             position: fixed;
             width: 100%;
             z-index: 3;
+            background-color: #05b2f7;
+        }
+        .header {
+            width: 63%;
+            margin: 0 auto;
         }
 
         .header ul {
@@ -31,19 +40,20 @@
             padding: 0;
             list-style: none;
             overflow: hidden;
-            background-color: #fff;
         }
 
         .header li a {
             display: block;
             padding: 20px 20px;
-            border-right: 1px solid #f4f4f4;
             text-decoration: none;
+            color: white;
         }
 
         .header li a:hover,
         .header .menu-btn:hover {
-            background-color: #f4f4f4;
+            background: white;
+            color: #05b2f7;
+            border-radius: 50px;
         }
 
         .header .logo {
@@ -74,7 +84,7 @@
         }
 
         .header .menu-icon .navicon {
-            background: #333;
+            background: white;
             display: block;
             height: 2px;
             position: relative;
@@ -84,7 +94,7 @@
 
         .header .menu-icon .navicon:before,
         .header .menu-icon .navicon:after {
-            background: #333;
+            background: white;
             content: '';
             display: block;
             height: 100%;
@@ -130,7 +140,7 @@
 
         /* 48em = 768px */
 
-        @media (min-width: 48em) {
+        @media (min-width: 908px) {
             .header li {
                 float: left;
             }
@@ -147,19 +157,41 @@
             }
         }
 
+        @media (max-width: 907px) {
+            .header li {
+                text-align: center;
+            }
+            .header .logo {
+                display: inline-block;
+                float: none;
+                padding: 20px 0;
+            }
+            .header {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .header .menu-icon .navicon {
+                display: inline-block;
+            }
+        }
+
     </style>
 </head>
 <body>
+<div class="header-ctnr">
 <header class="header">
-    <a href="" class="logo">CSS Nav</a>
+    <a href="" class="logo"><img src="images/logo1.svg" alt="Szamello!" style="height: 40px;"></a>
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
-        <li><a href="#work">Our Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#careers">Careers</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#work">Aplikacja</a></li>
+        <li><a href="#about">Funkcje</a></li>
+        <li><a href="#careers">Zespół</a></li>
+        <li><a href="#contact">Subskrypcja</a></li>
     </ul>
 </header>
+</div>
 </body>
 </html>
