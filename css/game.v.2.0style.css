@@ -19,13 +19,13 @@ h1, h2, ol, #score, #time {
     padding: 10px;
 }
 
-.container {
-    min-height: 320px;
-    min-width: 320px;
-    width: 80vh;
-    height: 80vh;
-    margin: auto;
-}
+/*.container {*/
+    /*!*min-height: 320px;*!*/
+    /*!*min-width: 320px;*!*/
+    /*width: 80vh;*/
+    /*height: 80vh;*/
+    /*margin: auto;*/
+/*}*/
 
 .game-screen {
     background-color: #63ccff;
@@ -70,6 +70,10 @@ h1, h2, ol, #score, #time {
     width: 50px;
 }
 
+.logo{
+    padding: 5%;
+}
+
 /*play screen*/
 .play-screen {
     display: none;
@@ -79,8 +83,8 @@ h1, h2, ol, #score, #time {
     display: flex;
     min-height: 320px;
     min-width: 320px;
-    /*width: 500px;*/
-    /*height: 500px;*/
+    width: 30vw;
+    height: 30vw;
     align-items: stretch;
     flex-direction: column;
     border: 2px solid #029be5;
@@ -99,7 +103,7 @@ h1, h2, ol, #score, #time {
 }
 
 .dots {
-    background-image: url("../images/icons/hamburger.png");
+    background-image: url("../images/icons/hamburger (1).png");
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
@@ -122,3 +126,10 @@ h1, h2, ol, #score, #time {
 .end-screen {
     display: none;
 }
+
+/*@media screen and (max-width: 800px) {*/
+  /*.table{*/
+      /*min-height: 320px;*/
+      /*min-width: 320px;*/
+  /*}*/
+    /*}*/
