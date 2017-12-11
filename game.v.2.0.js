@@ -140,12 +140,18 @@ $(document).ready(function () {
         $('#score').text(score);
     }
 
+    var interval;
     function play() {
+        $board = createBoard();
+        $app.empty().append($board);
+        $pacManPosition = $('.table > div:nth-child(7) > div').eq(6);
+        createPacMan($pacManPosition);
+        clearInterval(interval);
         $(window).off('keydown keyup');
         score = 0;
         updateScore(0);
 
-        var fiveMinutes = 60 * 0.5,
+        var fiveMinutes = 10,
             display = document.querySelector('#time');
         startTimer(fiveMinutes, display);
 
@@ -196,7 +202,7 @@ $(document).ready(function () {
                 $('.start-screen, .play-screen').hide();
                 $('.end-screen').show().css('display', 'flex');
                 $('header h1').html('Fajna gra? Spróbuj jeszcze raz!');
-                $('div.thanks').append('Super! Twój wynik to ' + $(score)).addClass('btn blue');
+                $('div.thanks').append('Super! Twój wynik to ' + score).addClass('btn blue');
              }
 
         }, 1000);
