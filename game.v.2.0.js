@@ -144,6 +144,11 @@ $(document).ready(function () {
         $(window).off('keydown keyup');
         score = 0;
         updateScore(0);
+
+        var fiveMinutes = 60 * 0.5,
+            display = document.querySelector('#time');
+        startTimer(fiveMinutes, display);
+
         $(window).on('keydown', function (event) {
             // console.log(event.keyCode, event.key);
 
@@ -172,14 +177,12 @@ $(document).ready(function () {
         })
     }
 
-    gameIntervalId = setInterval(function () {
-        // moveEggs();
-        detectCatch();
-    }, 300)
 
+    var interval;
     function startTimer(duration, display) {
+        clearInterval(interval);
         var timer = duration, minutes, seconds;
-        var interval = setInterval(function () {
+         interval = setInterval(function () {
             minutes = parseInt(timer / 60, 10)
             seconds = parseInt(timer % 60, 10);
 
@@ -201,11 +204,7 @@ $(document).ready(function () {
     }
 
 
-    window.onload = function () {
-        var fiveMinutes = 60 * 0.5,
-            display = document.querySelector('#time');
-        startTimer(fiveMinutes, display);
-    };
+
 
 
 
