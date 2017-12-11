@@ -144,7 +144,7 @@ $(document).ready(function () {
         $(window).off('keydown keyup');
         score = 0;
         updateScore(0);
-        $(window).on('keyup', function (event) {
+        $(window).on('keydown', function (event) {
             // console.log(event.keyCode, event.key);
 
             switch (event.keyCode) {
