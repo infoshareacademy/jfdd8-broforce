@@ -151,7 +151,7 @@ $(document).ready(function () {
         score = 0;
         updateScore(0);
 
-        var fiveMinutes = 10,
+        var fiveMinutes = 30,
             display = document.querySelector('#time');
         startTimer(fiveMinutes, display);
 
