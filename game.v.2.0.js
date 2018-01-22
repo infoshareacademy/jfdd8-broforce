@@ -16,8 +16,6 @@ $(document).ready(function () {
         '             '
     ];
     var score = 0;
-    var gameIntervalId;
-    var eggsIntervalId;
     var $app = $('#app');
     var $board = createBoard();
     $app.append($board);
@@ -44,31 +42,8 @@ $(document).ready(function () {
         );
     }
 
-    // function drawEggStartingPosition() {
-    //     return $('.table div:first div').eq(
-    //         Math.floor(Math.random() * size)
-    //     )
-    // }
-
     function createPacMan($node) {
         $node.addClass('pacMan')
-    }
-
-
-    // function createEgg($node) {
-    //     $node.addClass('egg')
-    // }
-
-    function moveEggs() {
-        $('.egg').each(function () {
-            $(this)
-                .removeClass('egg')
-                .parent()
-                .next()
-                .find('div')
-                .eq($(this).index())
-                .addClass('egg')
-        })
     }
 
 
@@ -151,12 +126,11 @@ $(document).ready(function () {
         score = 0;
         updateScore(0);
 
-        var fiveMinutes = 10,
+        var fiveMinutes = 30,
             display = document.querySelector('#time');
         startTimer(fiveMinutes, display);
 
         $(window).on('keydown', function (event) {
-            // console.log(event.keyCode, event.key);
 
             switch (event.keyCode) {
                 case 39:
@@ -189,7 +163,7 @@ $(document).ready(function () {
         clearInterval(interval);
         var timer = duration, minutes, seconds;
          interval = setInterval(function () {
-            minutes = parseInt(timer / 60, 10)
+            minutes = parseInt(timer / 60, 10);
             seconds = parseInt(timer % 60, 10);
 
             minutes = minutes < 10 ? "0" + minutes : minutes;
